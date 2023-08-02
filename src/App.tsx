@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { ChakraProvider, Box, Text, Grid } from '@chakra-ui/react'
 
-import { Fonts, theme } from './infra/chakra'
+import { Fonts, theme } from '@/infra/chakra'
 import { ColorModeSwitcher } from '@/ui'
 
 export const App = () => (
