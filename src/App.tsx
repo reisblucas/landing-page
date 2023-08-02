@@ -3,11 +3,12 @@ import { ChakraProvider, Box, Text, Grid } from '@chakra-ui/react'
 
 import { Fonts, theme } from '@/infra/chakra'
 import { ColorModeSwitcher } from '@/ui'
+import Router from '@/infra/router'
 
 export const App = () => (
 	<ChakraProvider theme={theme}>
 		<Fonts />
-		{/* Put routers here */}
+		<Router />
 		<Box textAlign="center" fontSize="xl">
 			<Grid minH="100vh" p={3}>
 				<ColorModeSwitcher justifySelf="flex-end" />
