@@ -1,12 +1,12 @@
-import pagesData from './pagesData'
-import { Routes, Route } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
+import { Home } from '@/pages/home'
 
-const Router = () => {
-	const pageRoutes = pagesData.map(({ element, path, title }) => {
-		return <Route key={title} path={`/${path}`} element={element} />
-	})
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <Home />,
+		errorElement: <div>404</div>,
+	},
+])
 
-	return <Routes>{pageRoutes}</Routes>
-}
-
-export default Router
+export default router
