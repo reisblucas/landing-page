@@ -5,6 +5,9 @@ export const theme = extendTheme({
 		heading: `'Cairo', sans-serif`,
 		body: `'Cairo', sans-serif`,
 	},
+	colors: {
+		'background-hero': '#FCF7F0',
+	},
 	config: {
 		cssVarPrefix: 'landing-page',
 	},
