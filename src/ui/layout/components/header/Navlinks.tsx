@@ -2,28 +2,20 @@ import { Box, Link, List, ListItem } from '@chakra-ui/react'
 
 export function Navlinks() {
 	return (
-		<List
-			gap={4}
-			display="flex"
-			_hover={{
-				a: {
-					'text-decoration': 'none',
-					opacity: 0.6,
-				},
-			}}
-			m={0}
-		>
+		<List gap={4} display={{ base: 'none', lg: 'flex' }} m={0}>
 			{Navlinks.links.map(({ href, title }) => (
 				<ListItem
 					key={href}
 					lineHeight="30px"
 					_hover={{
-						transition: 'all 1s ease-in-out',
 						a: {
 							opacity: 1,
+							textDecoration: 'none',
+							transition: 'all 0.8s ease-in-out',
 						},
 						div: {
 							opacity: 1,
+							transition: 'all 0.8s ease-in-out',
 						},
 					}}
 				>
