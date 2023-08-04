@@ -1,7 +1,12 @@
+import { Box } from '@chakra-ui/react'
+
+import { gpx, gpy } from '@/ui'
+
 export function Home() {
 	return (
-		<div>
-			<h1>Home</h1>
-		</div>
+		// section one
+		<Box w="full" px={gpx} py={gpy}>
+			Home teste teste
+		</Box>
 	)
 }
