@@ -1,7 +1,8 @@
-import { ComponentStyleConfig } from '@chakra-ui/react'
+import { ComponentStyleConfig, StyleFunctionProps } from '@chakra-ui/react'
 
 export const Text: ComponentStyleConfig = {
-	baseStyle: {
-		color: 'blackAlpha.700',
-	},
+	baseStyle: (props: StyleFunctionProps) => ({
+		color: props.colorMode === 'dark' ? props.colorScheme : 'blackAlpha.700',
+		fontSize: 'sm',
+	}),
 }
