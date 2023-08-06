@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 
-import { gpx } from '@/ui/patterns'
+import { ColorModeSwitcher, gpx } from '@/ui/patterns'
 
 import { Logo } from './Logo'
 import { Navlinks } from './Navlinks'
@@ -16,9 +16,14 @@ export function Header() {
 			position="sticky"
 			top={0}
 			backgroundColor="background-hero"
+			zIndex="sticky"
 		>
 			<Logo />
-			<Navlinks />
+
+			<Flex gap={2} alignItems="center">
+				<ColorModeSwitcher size="xs" />
+				<Navlinks />
+			</Flex>
 		</Flex>
 	)
 }
