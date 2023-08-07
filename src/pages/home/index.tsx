@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, Icon, Image, Img, Show, Text } from '@chakra-ui/react'
 
-import { Section } from '@/ui'
+import { DoctorGradient, Section } from '@/ui'
 import { ArrowRightIcon } from '@/ui/icons'
 
 export function Home() {
@@ -59,33 +59,21 @@ export function Home() {
 						</Text>
 					</Flex>
 
-					<Flex justifyContent="center" overflow="hidden" position="relative">
-						<Img
-							src="images/landing/doctor2.webp"
-							boxSize="sm"
-							zIndex={1}
-							alt="Doutora sorrindo, vestida com um jaleco junto do estetoscópio, está segurando e olhando para o iPad"
-						/>
-						<Box
-							w={{ base: '85%', md: '50%' }}
-							h="50%"
-							position="absolute"
-							bottom={{ base: 32, md: 32 }}
-							left={{ base: 12, md: 44 }}
-							borderTopRadius="16rem"
-							bgGradient={`repeating-linear-gradient(
-								180deg,
-								#b5eac3,
-								#b5eac3 0%,
-								transparent 5%,
-								transparent 10px
-							)`}
-						/>
-					</Flex>
+					<Show above="md">
+						<DoctorGradient />
+					</Show>
 				</>
 			}
 			right={
-				<Flex backgroundColor="#fbf3e8" flexDirection="column" h={{ base: '400px', lg: 'full' }} borderRadius={16}>
+				<Flex backgroundColor="#fbf3e8" flexDirection="column" h={{ base: '768px', lg: 'full' }} borderTopRadius={32}>
+					<Show above="md">
+						<Img src="images/landing/lorem-logo.png" maxW="50%" maxH="50%" m="0 auto" />
+					</Show>
+
+					<Show below="md">
+						<DoctorGradient />
+					</Show>
+
 					<Flex flexGrow={1} flexDirection="row" justifyContent="center" gap={{ base: 6, md: 10 }} py={4}>
 						<Flex position="relative">
 							<Box
@@ -105,7 +93,6 @@ export function Home() {
 								zIndex={1}
 							/>
 						</Flex>
-
 						<Flex position="relative">
 							<Box
 								width={36}
@@ -155,7 +142,6 @@ export function Home() {
 								/>
 							</Flex>
 						</Flex>
-
 						<Flex position="relative" alignContent="space-between" w="30%">
 							<Box
 								width={36}
