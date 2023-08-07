@@ -1,3 +1,3 @@
 export { Header } from './header'
-export { Section } from './section'
+export { SectionSplit } from './section'
 export * from './general'

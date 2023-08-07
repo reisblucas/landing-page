@@ -1,13 +1,13 @@
 import { Button, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
 
-import { DoctorGradient, Section } from '@/ui'
+import { DoctorGradient, SectionSplit } from '@/ui'
 import { FaArrowDown } from 'react-icons/fa'
 
 export function Home() {
 	const businessName = 'Lorem'
 
 	return (
-		<Section
+		<SectionSplit
 			hasPaddingXOnLeft
 			left={
 				<Flex flexDirection="column" height="80vh" justifyContent="center">

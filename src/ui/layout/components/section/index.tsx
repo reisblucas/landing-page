@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 
 import { gpx, gpySection } from '@/ui/patterns'
 
-export function Section({ left, right, hasPaddingXOnLeft, hasPaddingXOnRight }: Section.Props) {
+export function SectionSplit({ left, right, hasPaddingXOnLeft, hasPaddingXOnRight }: SectionSplit.Props) {
 	return (
 		<Flex w="full" py={gpySection} flexDirection={{ base: 'column', lg: 'row' }} justifyContent="center">
 			<Flex w={{ base: 'full', lg: '50%' }} flexDirection="column" px={hasPaddingXOnLeft ? gpx : 0}>
@@ -17,7 +17,7 @@ export function Section({ left, right, hasPaddingXOnLeft, hasPaddingXOnRight }: 
 	)
 }
 
-export namespace Section {
+export namespace SectionSplit {
 	export interface Props {
 		left: ReactNode
 		right: ReactNode
