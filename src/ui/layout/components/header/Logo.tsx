@@ -1,20 +1,13 @@
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex, Img, Text } from '@chakra-ui/react'
 
 export function Logo() {
 	return (
 		<Flex alignItems="center" gap={2}>
-			<Flex
-				w={{ base: '30px', md: '50px' }}
-				h={{ base: '30px', md: '50px' }}
-				backgroundColor="green.500"
-				borderRadius="full"
-				alignItems="center"
-				justifyContent="center"
-			>
-				Logo
-			</Flex>
+			<Img src="images/landing/lorem-logo.png" w={{ base: '30px', md: '45px' }} h={{ base: '35px', md: '50px' }} />
 
-			<Text fontWeight={800}>business name</Text>
+			<Text fontWeight={800} fontSize="xl">
+				Lorem
+			</Text>
 		</Flex>
 	)
 }
