@@ -59,14 +59,14 @@ export function Home() {
 						</Text>
 					</Flex>
 
-					<Show above="md">
+					<Show above="lg">
 						<DoctorGradient />
 					</Show>
 				</>
 			}
 			right={
 				<Flex backgroundColor="#fbf3e8" flexDirection="column" h={{ base: '768px', lg: 'full' }} borderTopRadius={32}>
-					<Show above="md">
+					<Show above="lg">
 						<Img src="images/landing/lorem-logo.png" maxW="50%" maxH="50%" m="0 auto" />
 					</Show>
 
@@ -103,7 +103,7 @@ export function Home() {
 								borderRadius={16}
 								padding={2}
 								textAlign="center"
-								top={5}
+								top={3}
 								bgGradient={`repeating-linear-gradient(
 									-45deg,
 									#ffd6d4,
