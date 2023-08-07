@@ -55,7 +55,7 @@ export function Home() {
 						</Flex>
 
 						<Text borderBottom="1px" borderColor="blackAlpha.500">
-							+ 100 usuários
+							+ 1000 médicos
 						</Text>
 					</Flex>
 
