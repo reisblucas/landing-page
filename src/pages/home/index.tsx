@@ -10,7 +10,7 @@ export function Home() {
 		<Section
 			left={
 				<>
-					<Show below="xs">
+					<Show below="md">
 						<Flex w="full" py={2} justifyContent="center" alignItems="center">
 							<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
 						</Flex>
@@ -58,11 +58,6 @@ export function Home() {
 							+ 100 usuários
 						</Text>
 					</Flex>
-
-					{/* doctor image */}
-					{/* <Flex flexGrow={1} backgroundColor="red" overflow="hidden">
-						<Img src="images/landing/doctor2.webp" />
-					</Flex> */}
 				</>
 			}
 			right={
