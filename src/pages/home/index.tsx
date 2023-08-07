@@ -8,6 +8,7 @@ export function Home() {
 
 	return (
 		<Section
+			hasPaddingXOnLeft
 			left={
 				<>
 					<Show below="md">
