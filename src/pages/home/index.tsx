@@ -1,19 +1,26 @@
-import { Box, Button, Flex, Heading, Icon, Image, Img, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Icon, Image, Img, Show, Text } from '@chakra-ui/react'
 
 import { Section } from '@/ui'
 import { ArrowRightIcon } from '@/ui/icons'
 
 export function Home() {
+	const businessName = 'Lorem'
+
 	return (
 		<Section
 			left={
 				<>
-					<Heading as="h1" size="4xl" fontWeight="light" pb={4}>
-						Finanças
+					<Show below="xs">
+						<Flex w="full" py={2} justifyContent="center" alignItems="center">
+							<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
+						</Flex>
+					</Show>
+
+					<Heading as="h1" size="4xl" fontWeight="light" pb={{ base: 4, md: 0 }}>
+						Finanças?
 						<br />
-						Burocracia
-						<br />
-						Deixe com a gente!
+						Burocracia?
+						<br />A {businessName} cuida para você!
 					</Heading>
 
 					<Flex justifyContent="center" py={6}>
@@ -24,7 +31,7 @@ export function Home() {
 					</Flex>
 
 					<Text>
-						$BussinesName simplifica a vida dos médicos. Gerenciamento, rastreamento e pagamento - tudo em um só lugar.
+						{businessName} simplifica a vida dos médicos. Gerenciamento, rastreamento e pagamento - tudo em um só lugar.
 					</Text>
 
 					{/* user pictures */}
