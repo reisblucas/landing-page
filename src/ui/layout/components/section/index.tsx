@@ -3,14 +3,16 @@ import { ReactNode } from 'react'
 
 import { gpx, gpySection } from '@/ui/patterns'
 
+// @fix
 export function Section({ left, right }: Section.Props) {
 	return (
-		<Flex w="full" px={gpx} py={gpySection} flexDirection={{ base: 'column', md: 'row' }}>
-			<Flex w={{ base: 'full', md: '50%' }} h={{ md: '768px' }} flexDirection="column">
+		<Flex w="full" px={gpx} py={gpySection} flexDirection={{ base: 'column', lg: 'row' }} justifyContent="center">
+			<Flex w={{ base: 'full', lg: '50%' }} h={{ lg: '768px' }} flexDirection="column">
 				{left}
 			</Flex>
 
-			<Flex w={{ base: 'full', md: '50%' }} h="768px" flexDirection="column">
+			{/* fix HEIGHT property conflict on smartphone screen when remove it */}
+			<Flex w={{ base: 'full', lg: '50%' }} height="768px" flexDirection="column">
 				{right}
 			</Flex>
 		</Flex>
