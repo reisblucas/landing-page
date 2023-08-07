@@ -1,16 +1,18 @@
-import { Box, Flex } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
 import { gpx, gpySection } from '@/ui/patterns'
 
 export function Section({ left, right }: Section.Props) {
 	return (
-		<Flex w="full" px={gpx} py={gpySection}>
-			<Flex w="50%" h="768px" flexDirection="column">
+		<Flex w="full" px={gpx} py={gpySection} flexDirection={{ base: 'column', md: 'row' }}>
+			<Flex w={{ base: 'full', md: '50%' }} h={{ md: '768px' }} flexDirection="column">
 				{left}
 			</Flex>
 
-			<Box>{right}</Box>
+			<Flex w={{ base: 'full', md: '50%' }} h="768px" flexDirection="column">
+				{right}
+			</Flex>
 		</Flex>
 	)
 }
