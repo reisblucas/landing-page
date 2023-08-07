@@ -58,10 +58,7 @@ export function Home() {
 							+ 100 usuários
 						</Text>
 					</Flex>
-				</>
-			}
-			right={
-				<Flex backgroundColor="#fbf3e8" flexDirection="column" h="full" borderRadius={16}>
+
 					<Flex justifyContent="center" overflow="hidden" position="relative">
 						<Img
 							src="images/landing/doctor2.webp"
@@ -85,7 +82,10 @@ export function Home() {
 							)`}
 						/>
 					</Flex>
-
+				</>
+			}
+			right={
+				<Flex backgroundColor="#fbf3e8" flexDirection="column" h={{ base: '400px', lg: 'full' }} borderRadius={16}>
 					<Flex flexGrow={1} flexDirection="row" justifyContent="center" gap={{ base: 6, md: 10 }} py={4}>
 						<Flex position="relative">
 							<Box
