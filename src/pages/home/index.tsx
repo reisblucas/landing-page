@@ -87,7 +87,13 @@ export function Home() {
 
 			{/* Pain section */}
 			<Section backgroundColor="#fcf1e0" gap={8}>
-				<Heading as="h2" fontSize="6xl" fontFamily="heading" fontWeight="light" textAlign="center">
+				<Heading
+					as="h2"
+					fontSize={{ base: '5xl', md: '6xl' }}
+					fontFamily="heading"
+					fontWeight="light"
+					textAlign="center"
+				>
 					Some text
 				</Heading>
 
@@ -129,7 +135,7 @@ export function Home() {
 					))}
 				</Flex>
 
-				<Text fontSize="2xl" textAlign="center">
+				<Text fontSize={{ base: 'xl', md: '2xl' }} textAlign="center">
 					Some conclusion text for this section
 				</Text>
 			</Section>
@@ -139,7 +145,7 @@ export function Home() {
 
 export namespace Home {
 	export const ProfileImgPaths = [
-		// could get from api based on our the first users
+		// could get based on our the first users
 		'images/profiles/img1.jpg',
 		'images/profiles/img2.jpg',
 		'images/profiles/img1.jpg',
@@ -151,11 +157,6 @@ export namespace Home {
 		second: 'green.400',
 	}
 
-	// type Pain = {
-	// 	title: string
-	// 	icon: string
-	// 	description: string
-	// }
 	export const Pains = [
 		{ title: 'Lorem', icon: '', description: '...' },
 		{ title: 'Ipsum', icon: '', description: '...' },
