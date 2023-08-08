@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
+import { Box, Button, Center, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
 import { FaArrowDown } from 'react-icons/fa'
 import { Fragment } from 'react'
 
@@ -90,7 +90,7 @@ export function Home() {
 					fontWeight="light"
 					textAlign="center"
 				>
-					Some text
+					Some Heading
 				</Heading>
 
 				<Flex
@@ -135,6 +135,56 @@ export function Home() {
 					Some conclusion text for this section
 				</Text>
 			</Section>
+
+			<SectionSplit
+				hasPaddingXOnLeft
+				left={
+					<Flex
+						flexDirection="column"
+						minHeight={{ base: '360px', md: '768px' }}
+						justifyContent="space-evenly"
+						alignItems="center"
+					>
+						<Heading as="h2" fontFamily="heading" fontSize={{ base: '5xl', md: '6xl' }} fontWeight="light">
+							Provemos A Ajuda Que Você Precisa
+						</Heading>
+
+						<Center
+							width="full"
+							height="full"
+							position="relative"
+							flexGrow={1}
+							overflow={{ base: 'hidden', lg: 'inherit' }}
+						>
+							<Img
+								src="images/landing/how-img1.jpeg"
+								width="50%"
+								height="50%"
+								maxWidth="384px"
+								borderRadius="2xl"
+								zIndex={2}
+								position="absolute"
+								bottom={8}
+								left={20}
+							/>
+							<Img
+								src="images/landing/how-img2.jpeg"
+								width="50%"
+								height="70%"
+								maxWidth="384px"
+								maxHeight="400px"
+								borderRadius="2xl"
+								border="2px solid #fff"
+								position="absolute"
+								zIndex={1}
+								transform="rotate(30deg)"
+								right={{ base: 20, lg: 30 }}
+							/>
+						</Center>
+					</Flex>
+				}
+				right={<></>}
+			/>
 		</Fragment>
 	)
 }
