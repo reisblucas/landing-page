@@ -1,192 +1,151 @@
-import { Box, Button, Flex, Heading, Icon, Image, Img, Show, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
+import { FaArrowDown } from 'react-icons/fa'
+import { Fragment } from 'react'
 
-import { DoctorGradient, Section } from '@/ui'
-import { ArrowRightIcon } from '@/ui/icons'
+import { DoctorGradient, Section, SectionSplit } from '@/ui'
 
 export function Home() {
 	const businessName = 'Lorem'
 
 	return (
-		<Section
-			hasPaddingXOnLeft
-			left={
-				<>
-					<Show below="md">
-						<Flex w="full" py={2} justifyContent="center" alignItems="center">
-							<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
-						</Flex>
-					</Show>
+		<Fragment>
+			<SectionSplit
+				hasPaddingXOnLeft
+				left={
+					<Flex flexDirection="column" height="80vh" justifyContent="center">
+						<Show below="md">
+							<Flex w="full" py={2} justifyContent="center" alignItems="center">
+								<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
+							</Flex>
+						</Show>
 
-					<Heading as="h1" size="4xl" fontWeight="light" pb={{ base: 4, md: 0 }}>
-						Finanças?
-						<br />
-						Burocracia?
-						<br />A {businessName} cuida para você!
-					</Heading>
+						<Heading as="h1" size="4xl" fontWeight="light" pb={{ base: 4, md: 4 }}>
+							Finanças?
+							<br />
+							Burocracia?
+							<br />A {businessName} cuida para você!
+						</Heading>
 
-					<Flex justifyContent="center" py={6}>
-						<Button gap={4} alignItems="center" width="fit-content" p={4} borderRadius="full" colorScheme="green">
-							<Text color="background-hero">Começar agora</Text>
-							<Icon as={ArrowRightIcon} stroke="background-hero" />
-						</Button>
-					</Flex>
-
-					<Text>
-						{businessName} simplifica a vida dos médicos. Gerenciamento, rastreamento e pagamento - tudo em um só lugar.
-					</Text>
-
-					{/* user pictures */}
-					<Flex height={10} my={4} alignItems="center">
-						<Flex position="relative" width="130px" height="full">
-							{Home.ProfileImgPaths.map((path, i) => (
-								<Img
-									key={path}
-									boxSize="40px"
-									borderRadius="full"
-									src={path}
-									border="2px"
-									borderColor="background-hero"
-									backgroundColor="grey"
-									zIndex={i}
-									position="absolute"
-									left={`${i * 28}px`}
-									top={0}
-								/>
-							))}
-						</Flex>
-
-						<Text borderBottom="1px" borderColor="blackAlpha.500">
-							+ 1000 médicos
+						<Text fontSize="md">
+							{businessName} simplifica a vida dos médicos. Gerenciamento, rastreamento e pagamento - tudo em um só
+							lugar.
 						</Text>
-					</Flex>
 
-					<Show above="lg">
-						<DoctorGradient />
-					</Show>
-				</>
-			}
-			right={
-				<Flex backgroundColor="#fbf3e8" flexDirection="column" h={{ base: '768px', lg: 'full' }} borderTopRadius={32}>
-					<Show above="lg">
-						<Img src="images/landing/lorem-logo.png" maxW="50%" maxH="50%" m="0 auto" />
-					</Show>
-
-					<Show below="md">
-						<DoctorGradient />
-					</Show>
-
-					<Flex flexGrow={1} flexDirection="row" justifyContent="center" gap={{ base: 6, md: 10 }} py={4}>
-						<Flex position="relative">
-							<Box
-								width={20}
-								height="80%"
-								backgroundColor={Home.GraphColorPattern.first}
-								alignSelf="flex-end"
-								borderTopRadius={20}
-							/>
-							<Image
-								src="images/landing/red-arrow.png"
-								boxSize={20}
-								position="absolute"
-								transform="scaleY(-1) rotate(-15deg)"
-								top={5}
-								right={-8}
-								zIndex={1}
-							/>
-						</Flex>
-						<Flex position="relative">
-							<Box
-								width={36}
-								height={16}
-								border="1px"
-								borderColor="#ffd6d4"
-								position="absolute"
-								borderRadius={16}
-								padding={2}
-								textAlign="center"
-								top={3}
-								bgGradient={`repeating-linear-gradient(
-									-45deg,
-									#ffd6d4,
-									#ffd6d4 2px,
-									transparent 2px,
-									transparent 5px 
-								)`}
-							>
-								<Text>Total</Text>
-								<Text fontFamily="Baskerville" fontSize="xl" fontWeight="bold">
-									<Text as="span" fontSize="xs">
-										R$
-									</Text>
-									25.358,00
-								</Text>
-							</Box>
-
-							<Flex position="relative">
-								<Box
-									width={20}
-									height="50%"
-									backgroundColor={Home.GraphColorPattern.second}
-									alignSelf="flex-end"
-									borderTopRadius={20}
-									position="relative"
-								/>
-
-								<Image
-									src="images/landing/green-arrow.png"
-									boxSize={32}
-									position="absolute"
-									transform="scaleY(-1) rotate(0deg)"
-									top={28}
-									right={-10}
-									zIndex={1}
-								/>
+						{/* user pictures */}
+						<Flex height={12} my={4} alignItems="center" gap={4}>
+							<Flex position="relative" width="130px" height="full">
+								{Home.ProfileImgPaths.map((path, i) => (
+									<Img
+										key={path}
+										boxSize={12}
+										borderRadius="full"
+										src={path}
+										border="2px"
+										borderColor="background-hero"
+										backgroundColor="grey"
+										zIndex={i}
+										position="absolute"
+										left={`${i * 28}px`}
+										top={0}
+									/>
+								))}
 							</Flex>
-						</Flex>
-						<Flex position="relative" alignContent="space-between" w="30%">
-							<Box
-								width={36}
-								height={16}
-								border="1px"
-								borderColor="#b5eac3"
-								position="absolute"
-								borderRadius={16}
-								padding={2}
-								textAlign="center"
-								top={32}
-								bgGradient={`repeating-linear-gradient(
-									45deg,
-									#b5eac3,
-									#b5eac3 2px,
-									transparent 2px,
-									transparent 5px
-								)`}
-							>
-								<Text>Total</Text>
-								<Text fontFamily="Baskerville" fontSize="xl" fontWeight="bold">
-									<Text as="span" fontSize="xs">
-										R$
-									</Text>
-									21.022,20
-								</Text>
-							</Box>
 
-							<Flex width="full" justifyContent="center" position="absolute" bottom={4}>
-								<Text fontFamily="Baskerville" fontWeight="bold" fontSize={28} textAlign="center">
-									Some phrase
-								</Text>
-							</Flex>
+							<Text borderBottom="1px" borderColor="blackAlpha.500">
+								+ 1000 médicos
+							</Text>
+						</Flex>
+
+						<Flex justifyContent="center" py={4}>
+							<Button
+								gap={4}
+								alignItems="center"
+								width="fit-content"
+								p="8px 32px"
+								borderRadius="full"
+								colorScheme="green"
+								color="background-hero"
+							>
+								Saber mais
+								<Icon as={FaArrowDown} stroke="background-hero" />
+							</Button>
 						</Flex>
 					</Flex>
+				}
+				right={
+					<Flex flexDirection="column" h={{ base: '768px', lg: 'full' }} borderTopRadius={32} justifyContent="center">
+						<Show above="lg">
+							<Img src="images/landing/lorem-logo.png" maxW="50%" maxH="50%" m="0 auto" />
+						</Show>
+
+						<Show below="md">
+							<DoctorGradient />
+						</Show>
+					</Flex>
+				}
+			/>
+
+			{/* Pain section */}
+			<Section backgroundColor="#fcf1e0" gap={8}>
+				<Heading
+					as="h2"
+					fontSize={{ base: '5xl', md: '6xl' }}
+					fontFamily="heading"
+					fontWeight="light"
+					textAlign="center"
+				>
+					Some text
+				</Heading>
+
+				<Flex
+					flexDirection={{ base: 'column', lg: 'row' }}
+					width="full"
+					gap={12}
+					py={4}
+					justifyContent="center"
+					alignItems="center"
+				>
+					{Home.Pains.map((pain) => (
+						<Flex
+							key={pain.title}
+							flexDirection="column"
+							gap={4}
+							width="200px"
+							minHeight="150px"
+							border="1px solid rgba(56, 161, 105, 0.5)"
+							borderRadius={16}
+							justifyContent="center"
+							alignItems="center"
+							p={4}
+							backgroundColor="background-hero"
+							_hover={{
+								boxShadow:
+									'rgba(56, 161, 105, 0.4) -5px 5px, rgba(56, 161, 105, 0.3) -10px 10px, rgba(56, 161, 105, 0.2) -15px 15px, rgba(56, 161, 105, 0.1) -20px 20px, rgba(56, 161, 105, 0.05) -25px 25px',
+								transition: '0.5s',
+								transform: 'translate(25px, -25px)',
+								zIndex: 1,
+							}}
+						>
+							<Box width="50px" height="50px" backgroundColor="green.500" borderRadius="full" />
+							<Text>{pain.title}</Text>
+							<Text fontSize="sm">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium rem? Repellendus ipsam
+							</Text>
+						</Flex>
+					))}
 				</Flex>
-			}
-		/>
+
+				<Text fontSize={{ base: 'xl', md: '2xl' }} textAlign="center">
+					Some conclusion text for this section
+				</Text>
+			</Section>
+		</Fragment>
 	)
 }
 
 export namespace Home {
 	export const ProfileImgPaths = [
-		// could get from api based on our the first users
+		// could get based on our the first users
 		'images/profiles/img1.jpg',
 		'images/profiles/img2.jpg',
 		'images/profiles/img1.jpg',
@@ -197,4 +156,11 @@ export namespace Home {
 		first: 'red.500',
 		second: 'green.400',
 	}
+
+	export const Pains = [
+		{ title: 'Lorem', icon: '', description: '...' },
+		{ title: 'Ipsum', icon: '', description: '...' },
+		{ title: 'Dolor', icon: '', description: '...' },
+		{ title: 'Sit', icon: '', description: '...' },
+	]
 }
