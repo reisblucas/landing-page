@@ -143,7 +143,7 @@ export function Home() {
 				left={
 					<Flex
 						flexDirection="column"
-						minHeight={{ base: '360px', md: '768px' }}
+						minHeight={{ base: '500px', md: '768px' }}
 						justifyContent="space-evenly"
 						alignItems="center"
 					>
@@ -167,7 +167,7 @@ export function Home() {
 								zIndex={2}
 								position="absolute"
 								bottom={8}
-								left={20}
+								left={{ base: 10, md: 20 }}
 							/>
 							<Img
 								src="images/landing/how-img2.jpeg"
@@ -180,7 +180,7 @@ export function Home() {
 								position="absolute"
 								zIndex={1}
 								transform="rotate(15deg)"
-								right={{ base: 20, lg: 30 }}
+								right={{ base: 16, lg: 30 }}
 							/>
 						</Center>
 					</Flex>
