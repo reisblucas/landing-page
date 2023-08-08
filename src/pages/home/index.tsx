@@ -1,8 +1,8 @@
-import { Button, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
 import { FaArrowDown } from 'react-icons/fa'
 import { Fragment } from 'react'
 
-import { DoctorGradient, SectionSplit } from '@/ui'
+import { DoctorGradient, Section, SectionSplit } from '@/ui'
 
 export function Home() {
 	const businessName = 'Lorem'
@@ -84,6 +84,55 @@ export function Home() {
 					</Flex>
 				}
 			/>
+
+			{/* Pain section */}
+			<Section backgroundColor="#fcf1e0" gap={8}>
+				<Heading as="h2" fontSize="6xl" fontFamily="heading" fontWeight="light" textAlign="center">
+					Some text
+				</Heading>
+
+				<Flex
+					flexDirection={{ base: 'column', lg: 'row' }}
+					width="full"
+					gap={12}
+					py={4}
+					justifyContent="center"
+					alignItems="center"
+				>
+					{Home.Pains.map((pain) => (
+						<Flex
+							key={pain.title}
+							flexDirection="column"
+							gap={4}
+							width="200px"
+							minHeight="150px"
+							border="1px solid rgba(56, 161, 105, 0.5)"
+							borderRadius={16}
+							justifyContent="center"
+							alignItems="center"
+							p={4}
+							backgroundColor="background-hero"
+							_hover={{
+								boxShadow:
+									'rgba(56, 161, 105, 0.4) -5px 5px, rgba(56, 161, 105, 0.3) -10px 10px, rgba(56, 161, 105, 0.2) -15px 15px, rgba(56, 161, 105, 0.1) -20px 20px, rgba(56, 161, 105, 0.05) -25px 25px',
+								transition: '0.5s',
+								transform: 'translate(25px, -25px)',
+								zIndex: 1,
+							}}
+						>
+							<Box width="50px" height="50px" backgroundColor="green.500" borderRadius="full" />
+							<Text>{pain.title}</Text>
+							<Text fontSize="sm">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium rem? Repellendus ipsam
+							</Text>
+						</Flex>
+					))}
+				</Flex>
+
+				<Text fontSize="2xl" textAlign="center">
+					Some conclusion text for this section
+				</Text>
+			</Section>
 		</Fragment>
 	)
 }
