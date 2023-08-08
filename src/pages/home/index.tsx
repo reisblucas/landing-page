@@ -12,7 +12,7 @@ export function Home() {
 			<SectionSplit
 				hasPaddingXOnLeft
 				left={
-					<Flex flexDirection="column" height={{ base: '90vh', lg: '80vh' }} justifyContent="center">
+					<Flex flexDirection="column" height={{ base: '100vh', lg: '80vh' }} justifyContent="center">
 						<Show below="md">
 							<Flex w="full" py={2} justifyContent="center" alignItems="center">
 								<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
@@ -26,7 +26,7 @@ export function Home() {
 							<br />A {businessName} cuida para você!
 						</Heading>
 
-						<Text fontSize="md">
+						<Text fontSize={{ base: 'sm', md: 'md' }}>
 							{businessName} simplifica a vida dos médicos. Gerenciamento, rastreamento e pagamento - tudo em um só
 							lugar.
 						</Text>
