@@ -136,6 +136,7 @@ export function Home() {
 				</Text>
 			</Section>
 
+			{/* how section */}
 			<SectionSplit
 				hasPaddingXOnLeft
 				left={
@@ -174,10 +175,10 @@ export function Home() {
 								maxWidth="384px"
 								maxHeight="400px"
 								borderRadius="2xl"
-								border="2px solid #fff"
+								border="4px solid #fff"
 								position="absolute"
 								zIndex={1}
-								transform="rotate(30deg)"
+								transform="rotate(15deg)"
 								right={{ base: 20, lg: 30 }}
 							/>
 						</Center>
