@@ -94,12 +94,13 @@ export function Home() {
 				</Heading>
 
 				<Flex
-					flexDirection={{ base: 'column', lg: 'row' }}
+					flexDirection={{ base: 'column', md: 'row' }}
 					width="full"
 					gap={12}
 					py={4}
 					justifyContent="center"
 					alignItems="center"
+					wrap="wrap"
 				>
 					{Home.Pains.map((pain) => (
 						<Flex
