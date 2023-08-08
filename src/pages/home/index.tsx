@@ -2,7 +2,7 @@ import { Box, Button, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/re
 import { FaArrowDown } from 'react-icons/fa'
 import { Fragment } from 'react'
 
-import { DoctorGradient, Section, SectionSplit } from '@/ui'
+import { Section, SectionSplit } from '@/ui'
 
 export function Home() {
 	const businessName = 'Lorem'
@@ -12,7 +12,7 @@ export function Home() {
 			<SectionSplit
 				hasPaddingXOnLeft
 				left={
-					<Flex flexDirection="column" height="80vh" justifyContent="center">
+					<Flex flexDirection="column" height={{ base: '90vh', lg: '80vh' }} justifyContent="center">
 						<Show below="md">
 							<Flex w="full" py={2} justifyContent="center" alignItems="center">
 								<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
@@ -66,22 +66,18 @@ export function Home() {
 								colorScheme="green"
 								color="background-hero"
 							>
-								Saber mais
+								Saiba mais
 								<Icon as={FaArrowDown} stroke="background-hero" />
 							</Button>
 						</Flex>
 					</Flex>
 				}
 				right={
-					<Flex flexDirection="column" h={{ base: '768px', lg: 'full' }} borderTopRadius={32} justifyContent="center">
-						<Show above="lg">
+					<Show above="lg">
+						<Flex flexDirection="column" h={{ base: '768px', lg: 'full' }} borderTopRadius={32} justifyContent="center">
 							<Img src="images/landing/lorem-logo.png" maxW="50%" maxH="50%" m="0 auto" />
-						</Show>
-
-						<Show below="md">
-							<DoctorGradient />
-						</Show>
-					</Flex>
+						</Flex>
+					</Show>
 				}
 			/>
 
