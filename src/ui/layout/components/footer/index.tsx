@@ -1,5 +1,6 @@
 import { gpx, gpySection } from '@/ui/patterns'
-import { Box, HStack, VStack } from '@chakra-ui/react'
+import { Box, Flex, HStack, VStack } from '@chakra-ui/react'
+import { Logo } from '../header/Logo'
 
 export function Footer() {
 	return (
@@ -7,7 +8,13 @@ export function Footer() {
 			<Box backgroundColor="blue.800" borderTopRadius="3xl">
 				<HStack px={16} py={gpySection} justifyContent="space-between">
 					<VStack>
-						<Box>lucas</Box>
+						<Flex>
+							<Flex>
+								<Logo />
+							</Flex>
+						</Flex>
+
+						<Flex></Flex>
 					</VStack>
 					<HStack>
 						<VStack></VStack>
