@@ -7,9 +7,7 @@ import { Section, SectionSplit } from '@/ui'
 export function Home() {
 	const businessName = 'Lorem'
 
-	// const call
 	const cm = useColorMode()
-	console.log('cm', cm.colorMode)
 	const callToActionBg = cm.colorMode === 'light' ? 'white' : 'blue.900'
 
 	return (
@@ -208,8 +206,17 @@ export function Home() {
 
 			{/* Call to action section */}
 			<Section hasPaddingX alignItems="center">
-				<Flex width="80%" px={16} py={12} borderRadius="3xl" backgroundColor={callToActionBg}>
-					<Flex width={{ base: 'full', md: '50%' }} flexDirection="column" gap={4}>
+				<Flex
+					width={{ base: '95%', lg: '80%' }}
+					px={16}
+					py={12}
+					borderRadius="3xl"
+					backgroundImage="images/landing/cta-middle.svg"
+					backgroundColor={callToActionBg}
+					backgroundRepeat="no-repeat"
+					backgroundPosition={{ base: 'bottom -300px left', md: 'right -150px top' }}
+				>
+					<Flex width={{ base: 'full', md: '60%' }} flexDirection="column" gap={8} flexGrow={{ base: 1, lg: 0 }}>
 						<Heading as="h2" fontFamily="heading" fontSize={{ base: '5xl', md: '6xl' }} fontWeight="light">
 							Economize Dinheiro Como Nunca Antes
 						</Heading>
