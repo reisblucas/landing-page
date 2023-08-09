@@ -16,7 +16,7 @@ export function Home() {
 				hasPaddingXOnLeft
 				leftSection={
 					<Flex flexDirection="column" height={{ base: '100vh', lg: '80vh' }} justifyContent="center">
-						<Show below="md">
+						<Show below="lg">
 							<Flex w="full" py={2} justifyContent="center" alignItems="center">
 								<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
 							</Flex>
@@ -86,7 +86,7 @@ export function Home() {
 			<Section backgroundColor="#fcf1e0" gap={8} borderTopRadius="3xl" hasPaddingX>
 				<Heading
 					as="h2"
-					fontSize={{ base: '5xl', md: '6xl' }}
+					fontSize={{ base: '4xl', md: '6xl' }}
 					fontFamily="heading"
 					fontWeight="light"
 					textAlign="center"
@@ -147,7 +147,7 @@ export function Home() {
 						justifyContent="space-evenly"
 						alignItems="center"
 					>
-						<Heading as="h2" fontFamily="heading" fontSize={{ base: '5xl', md: '6xl' }} fontWeight="light">
+						<Heading as="h2" fontFamily="heading" fontSize={{ base: '4xl', md: '6xl' }} fontWeight="light">
 							Providenciamos A Ajuda Que Você Precisa
 						</Heading>
 
@@ -236,7 +236,7 @@ export function Home() {
 					backgroundSize={{ base: '1200px', md: 'auto' }}
 				>
 					<Flex width={{ base: 'full', md: '60%' }} flexDirection="column" gap={8} flexGrow={{ base: 1, lg: 0 }}>
-						<Heading as="h2" fontFamily="heading" fontSize={{ base: '5xl', md: '6xl' }} fontWeight="light">
+						<Heading as="h2" fontFamily="heading" fontSize={{ base: '4xl', md: '6xl' }} fontWeight="light">
 							Economize Dinheiro Como Nunca Antes
 						</Heading>
 
@@ -282,13 +282,7 @@ export function Home() {
 			{/* How section */}
 			<Section hasPaddingX justifyContent="center" backgroundColor="#fcf1e0" borderTopRadius="3xl">
 				<Flex width={{ base: '80%', md: '50%' }} justifyContent="center" m="0 auto" flexDirection="column" gap={4}>
-					<Heading
-						as="h2"
-						fontFamily="heading"
-						fontSize={{ base: '5xl', md: '6xl' }}
-						fontWeight="light"
-						textAlign="center"
-					>
+					<Heading as="h2" fontSize={{ base: '4xl', lg: '6xl' }} fontWeight="light" textAlign="center">
 						Gerencie Facilmente
 						<br />A Sua{' '}
 						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="green.200" px={4}>
