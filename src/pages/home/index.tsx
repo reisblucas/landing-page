@@ -325,7 +325,7 @@ export function Home() {
 				hasPaddingXOnLeft
 				backgroundColor="#fcf1e0"
 				leftSection={
-					<VStack flexDirection="column" alignItems="stretch" gap={8}>
+					<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="1024px">
 						<Heading as="h2" fontSize={{ base: '3xl', md: '5xl' }} fontWeight="light">
 							Pronto Para Começar?
 						</Heading>
@@ -358,7 +358,7 @@ export function Home() {
 							))}
 
 							<Box
-								width="80%"
+								width="50%"
 								height="80%"
 								position="absolute"
 								zIndex={1}
@@ -367,7 +367,7 @@ export function Home() {
 								borderBottom="3px solid"
 								borderStyle="dashed"
 								borderRightRadius="full"
-								transform="rotate(-30deg) translate(-15%)"
+								transform="rotate(-15deg) translate(15%)"
 							/>
 						</VStack>
 					</VStack>
