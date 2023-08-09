@@ -77,7 +77,7 @@ export function Home() {
 			/>
 
 			{/* Pain section */}
-			<Section backgroundColor="#fcf1e0" gap={8} borderTopRadius={20}>
+			<Section backgroundColor="#fcf1e0" gap={8} borderTopRadius="3xl">
 				<Heading
 					as="h2"
 					fontSize={{ base: '5xl', md: '6xl' }}
@@ -143,7 +143,7 @@ export function Home() {
 						alignItems="center"
 					>
 						<Heading as="h2" fontFamily="heading" fontSize={{ base: '5xl', md: '6xl' }} fontWeight="light">
-							Provemos A Ajuda Que Você Precisa
+							Providenciamos A Ajuda Que Você Precisa
 						</Heading>
 
 						<Center
