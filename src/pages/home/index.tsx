@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
+import { Box, Button, Center, Divider, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
 import { FaArrowDown } from 'react-icons/fa'
 import { Fragment } from 'react'
 
@@ -90,16 +90,17 @@ export function Home() {
 					fontWeight="light"
 					textAlign="center"
 				>
-					Some text
+					Some Pain Heading
 				</Heading>
 
 				<Flex
-					flexDirection={{ base: 'column', lg: 'row' }}
+					flexDirection={{ base: 'column', md: 'row' }}
 					width="full"
 					gap={12}
 					py={4}
 					justifyContent="center"
 					alignItems="center"
+					wrap="wrap"
 				>
 					{Home.Pains.map((pain) => (
 						<Flex
@@ -135,6 +136,78 @@ export function Home() {
 					Some conclusion text for this section
 				</Text>
 			</Section>
+
+			{/* how section */}
+			<SectionSplit
+				hasPaddingXOnLeft
+				left={
+					<Flex
+						flexDirection="column"
+						minHeight={{ base: '500px', md: '768px' }}
+						justifyContent="space-evenly"
+						alignItems="center"
+					>
+						<Heading as="h2" fontFamily="heading" fontSize={{ base: '5xl', md: '6xl' }} fontWeight="light">
+							Provemos A Ajuda Que Você Precisa
+						</Heading>
+
+						<Center
+							width="full"
+							height="full"
+							position="relative"
+							flexGrow={1}
+							overflow={{ base: 'hidden', lg: 'inherit' }}
+						>
+							<Img
+								src="images/landing/how-img1.jpeg"
+								width="50%"
+								height="50%"
+								maxWidth="384px"
+								borderRadius="2xl"
+								zIndex={2}
+								position="absolute"
+								bottom={8}
+								left={{ base: 10, md: 20 }}
+							/>
+							<Img
+								src="images/landing/how-img2.jpeg"
+								width="50%"
+								height="70%"
+								maxWidth="384px"
+								maxHeight="400px"
+								borderRadius="2xl"
+								border="4px solid #fff"
+								position="absolute"
+								zIndex={1}
+								transform="rotate(15deg)"
+								right={{ base: 16, lg: 30 }}
+							/>
+						</Center>
+					</Flex>
+				}
+				hasPaddingXOnRight
+				right={
+					<Flex
+						flexDirection="column"
+						minHeight={{ base: '500px', md: '768px' }}
+						justifyContent="space-evenly"
+						alignItems="center"
+						gap={4}
+						py={{ base: 4, lg: 0 }}
+					>
+						{Home.HowRight.map((how, i) => (
+							<Flex key={i} px={12} gap={4} flexDirection="column">
+								<Text fontFamily="heading" fontSize="4xl" color="black">
+									{how.title}
+								</Text>
+								<Text>{how.description}</Text>
+
+								<Divider />
+							</Flex>
+						))}
+					</Flex>
+				}
+			/>
 		</Fragment>
 	)
 }
@@ -158,5 +231,23 @@ export namespace Home {
 		{ title: 'Ipsum', icon: '', description: '...' },
 		{ title: 'Dolor', icon: '', description: '...' },
 		{ title: 'Sit', icon: '', description: '...' },
+	]
+
+	export const HowRight = [
+		{
+			title: 'Sem Comissões Ou Tarifas Escondidas',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
+		},
+		{
+			title: 'Melhor Escolha Para Grandes Pagamentos',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
+		},
+		{
+			title: 'Plataforma Construída Para Facilitar A Administração',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
+		},
 	]
 }
