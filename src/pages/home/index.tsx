@@ -1,4 +1,17 @@
-import { Box, Button, Center, Divider, Flex, Heading, Icon, Img, Show, Text, useColorMode } from '@chakra-ui/react'
+import {
+	Box,
+	Button,
+	Center,
+	Divider,
+	Flex,
+	Heading,
+	Icon,
+	Img,
+	Show,
+	Text,
+	VStack,
+	useColorMode,
+} from '@chakra-ui/react'
 import { FaArrowDown, FaArrowRight, FaCheck } from 'react-icons/fa'
 import { Fragment } from 'react'
 
@@ -305,6 +318,48 @@ export function Home() {
 					</Text>
 				</Flex>
 			</Section>
+
+			{/* Another Call to Action */}
+			<SectionSplit
+				hasPaddingXOnRight
+				hasPaddingXOnLeft
+				backgroundColor="#fcf1e0"
+				leftSection={
+					<VStack flexDirection="column" alignItems="stretch" gap={8}>
+						<Heading as="h2" fontSize={{ base: '3xl', md: '5xl' }} fontWeight="light">
+							Pronto Para Começar?
+						</Heading>
+
+						<VStack flexDirection="column" gap={8}>
+							{Home.BottomCTA.map((cta) => (
+								<VStack
+									key={cta.description}
+									width={{ base: '100px', md: '200px' }}
+									height={{ base: '100px', md: '200px' }}
+									borderRadius="3xl"
+									padding={8}
+									alignSelf={cta.alignSelf}
+									justifyContent="center"
+									alignItems="center"
+									marginRight={!!cta.marginRight ? cta.marginRight : undefined}
+									// add ligh and dark mode condition here
+									backgroundColor="background-hero"
+								>
+									<Box border="2px solid" borderColor={cta.color} px={4} py={2} borderRadius="3xl">
+										<Text fontSize="4xl" fontFamily="heading">
+											{cta.step}
+										</Text>
+									</Box>
+									<Text textAlign="center" fontSize="md">
+										{cta.description}
+									</Text>
+								</VStack>
+							))}
+						</VStack>
+					</VStack>
+				}
+				rightSection={<></>}
+			/>
 		</Fragment>
 	)
 }
@@ -345,6 +400,23 @@ export namespace Home {
 			title: 'Plataforma Construída Para Facilitar A Administração',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
+		},
+	]
+
+	export const BottomCTA = [
+		{ step: '01', description: 'Cadastre-se em poucos minutos', color: 'green.200', alignSelf: 'flex-start' },
+		{
+			step: '02',
+			description: 'Iremos verificar os seus dados',
+			color: 'red.200',
+			alignSelf: 'flex-end',
+		},
+		{
+			step: '03',
+			description: 'Comece a economizar dinheiro!',
+			color: 'purple.200',
+			alignSelf: 'center',
+			marginRight: '100px',
 		},
 	]
 }
