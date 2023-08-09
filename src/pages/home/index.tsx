@@ -104,7 +104,6 @@ export function Home() {
 							gap={4}
 							width="200px"
 							minHeight="150px"
-							border="1px solid rgba(56, 161, 105, 0.5)"
 							borderRadius={16}
 							justifyContent="center"
 							alignItems="center"
@@ -118,7 +117,7 @@ export function Home() {
 								zIndex: 1,
 							}}
 						>
-							<Box width="50px" height="50px" backgroundColor="green.500" borderRadius="full" />
+							<Box width="50px" height="50px" backgroundColor="green.200" borderRadius="full" />
 							<Text>{pain.title}</Text>
 							<Text fontSize="sm">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium rem? Repellendus ipsam
@@ -261,6 +260,39 @@ export function Home() {
 							</Flex>
 						</Flex>
 					</Flex>
+				</Flex>
+			</Section>
+
+			{/* How section */}
+			<Section hasPaddingX justifyContent="center" backgroundColor="#fcf1e0" borderTopRadius="3xl">
+				<Flex width={{ base: '80%', md: '50%' }} justifyContent="center" m="0 auto" flexDirection="column" gap={4}>
+					<Heading
+						as="h2"
+						fontFamily="heading"
+						fontSize={{ base: '5xl', md: '6xl' }}
+						fontWeight="light"
+						textAlign="center"
+					>
+						Gerencie Facilmente
+						<br />A Sua{' '}
+						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="green.200" px={4}>
+							Vida
+						</Text>
+						,
+						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="blue.200" px={4}>
+							Trabalho
+						</Text>{' '}
+						&{' '}
+						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="yellow.200" px={4}>
+							Família
+						</Text>
+					</Heading>
+
+					<Text fontSize={{ base: 'inherit', md: 'sm' }}>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, eligendi, exercitationem ea eum tempora
+						odit est quos nostrum pariatur ipsam molestiae maxime dolor quia officiis rem praesentium accusamus vero
+						non?
+					</Text>
 				</Flex>
 			</Section>
 		</Fragment>
