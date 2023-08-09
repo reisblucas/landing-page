@@ -211,10 +211,14 @@ export function Home() {
 					px={16}
 					py={12}
 					borderRadius="3xl"
-					backgroundImage="images/landing/cta-middle.svg"
+					backgroundImage={{
+						base: 'images/landing/cta-middle-vertical.svg',
+						md: 'images/landing/cta-middle-horizontal.svg',
+					}}
 					backgroundColor={callToActionBg}
 					backgroundRepeat="no-repeat"
-					backgroundPosition={{ base: 'bottom -300px left', md: 'right -150px top' }}
+					backgroundPosition={{ base: 'bottom -650px left -460px', md: 'top -350px left 200px' }}
+					backgroundSize={{ base: '1200px', md: 'auto' }}
 				>
 					<Flex width={{ base: 'full', md: '60%' }} flexDirection="column" gap={8} flexGrow={{ base: 1, lg: 0 }}>
 						<Heading as="h2" fontFamily="heading" fontSize={{ base: '5xl', md: '6xl' }} fontWeight="light">
