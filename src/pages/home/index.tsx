@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
+import { Box, Button, Center, Divider, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
 import { FaArrowDown } from 'react-icons/fa'
 import { Fragment } from 'react'
 
@@ -90,7 +90,7 @@ export function Home() {
 					fontWeight="light"
 					textAlign="center"
 				>
-					Some Heading
+					Some Pain Heading
 				</Heading>
 
 				<Flex
@@ -185,7 +185,28 @@ export function Home() {
 						</Center>
 					</Flex>
 				}
-				right={<></>}
+				hasPaddingXOnRight
+				right={
+					<Flex
+						flexDirection="column"
+						minHeight={{ base: '500px', md: '768px' }}
+						justifyContent="space-evenly"
+						alignItems="center"
+						gap={4}
+						py={{ base: 4, lg: 0 }}
+					>
+						{Home.HowRight.map((how, i) => (
+							<Flex key={i} px={12} gap={4} flexDirection="column">
+								<Text fontFamily="heading" fontSize="4xl" color="black">
+									{how.title}
+								</Text>
+								<Text>{how.description}</Text>
+
+								<Divider />
+							</Flex>
+						))}
+					</Flex>
+				}
 			/>
 		</Fragment>
 	)
@@ -210,5 +231,23 @@ export namespace Home {
 		{ title: 'Ipsum', icon: '', description: '...' },
 		{ title: 'Dolor', icon: '', description: '...' },
 		{ title: 'Sit', icon: '', description: '...' },
+	]
+
+	export const HowRight = [
+		{
+			title: 'Sem Comissões Ou Tarifas Escondidas',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
+		},
+		{
+			title: 'Melhor Escolha Para Grandes Pagamentos',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
+		},
+		{
+			title: 'Plataforma Construída Para Facilitar A Administração',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
+		},
 	]
 }
