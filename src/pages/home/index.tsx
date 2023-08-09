@@ -77,7 +77,7 @@ export function Home() {
 			/>
 
 			{/* Pain section */}
-			<Section backgroundColor="#fcf1e0" gap={8} borderTopRadius="3xl">
+			<Section backgroundColor="#fcf1e0" gap={8} borderTopRadius="3xl" hasPaddingX>
 				<Heading
 					as="h2"
 					fontSize={{ base: '5xl', md: '6xl' }}
