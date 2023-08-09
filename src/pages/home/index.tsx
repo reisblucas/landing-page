@@ -1,11 +1,14 @@
-import { Box, Button, Center, Divider, Flex, Heading, Icon, Img, Show, Text } from '@chakra-ui/react'
-import { FaArrowDown } from 'react-icons/fa'
+import { Box, Button, Center, Divider, Flex, Heading, Icon, Img, Show, Text, useColorMode } from '@chakra-ui/react'
+import { FaArrowDown, FaArrowRight, FaCheck } from 'react-icons/fa'
 import { Fragment } from 'react'
 
 import { Section, SectionSplit } from '@/ui'
 
 export function Home() {
 	const businessName = 'Lorem'
+
+	const cm = useColorMode()
+	const callToActionBg = cm.colorMode === 'light' ? 'white' : 'blue.900'
 
 	return (
 		<Fragment>
@@ -57,17 +60,9 @@ export function Home() {
 						</Flex>
 
 						<Flex justifyContent="center" py={4}>
-							<Button
-								gap={4}
-								alignItems="center"
-								width="fit-content"
-								p="8px 32px"
-								borderRadius="full"
-								colorScheme="green"
-								color="background-hero"
-							>
+							<Button borderRadius="full" px={8} py={4} variant="outline" colorScheme="green" width="fit-content">
 								Saiba mais
-								<Icon as={FaArrowDown} stroke="background-hero" />
+								<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
 							</Button>
 						</Flex>
 					</Flex>
@@ -208,6 +203,66 @@ export function Home() {
 					</Flex>
 				}
 			/>
+
+			{/* Call to action section */}
+			<Section hasPaddingX alignItems="center">
+				<Flex
+					width={{ base: '95%', lg: '80%' }}
+					px={16}
+					py={12}
+					borderRadius="3xl"
+					backgroundImage={{
+						base: 'images/landing/cta-middle-vertical.svg',
+						md: 'images/landing/cta-middle-horizontal.svg',
+					}}
+					backgroundColor={callToActionBg}
+					backgroundRepeat="no-repeat"
+					backgroundPosition={{ base: 'bottom -650px left -460px', md: 'top -350px left 200px' }}
+					backgroundSize={{ base: '1200px', md: 'auto' }}
+				>
+					<Flex width={{ base: 'full', md: '60%' }} flexDirection="column" gap={8} flexGrow={{ base: 1, lg: 0 }}>
+						<Heading as="h2" fontFamily="heading" fontSize={{ base: '5xl', md: '6xl' }} fontWeight="light">
+							Economize Dinheiro Como Nunca Antes
+						</Heading>
+
+						<Button borderRadius="full" px={8} py={4} variant="outline" colorScheme="green" width="fit-content">
+							Começar
+							<Icon as={FaArrowRight} ml={4} />
+						</Button>
+
+						<Flex
+							gap={2}
+							flexDirection="column"
+							sx={{
+								div: {
+									gap: 2,
+									alignItems: 'center',
+								},
+							}}
+						>
+							<Flex>
+								<Icon as={FaCheck} />
+								<Text>
+									Alguma coisa que{' '}
+									<Text as="span" fontWeight="bold">
+										funciona para você
+									</Text>
+								</Text>
+							</Flex>
+
+							<Flex>
+								<Icon as={FaCheck} />
+								<Text>
+									Gerenciamento de gastos,{' '}
+									<Text as="span" fontWeight="bold">
+										gerenciado
+									</Text>
+								</Text>
+							</Flex>
+						</Flex>
+					</Flex>
+				</Flex>
+			</Section>
 		</Fragment>
 	)
 }
