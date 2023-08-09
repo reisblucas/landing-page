@@ -329,13 +329,12 @@ export function Home() {
 						<Heading as="h2" fontSize={{ base: '3xl', md: '5xl' }} fontWeight="light">
 							Pronto Para Começar?
 						</Heading>
-
 						<VStack flexDirection="column" gap={8} overflow="hidden" position="relative">
 							{Home.BottomCTA.map((cta) => (
 								<VStack
 									key={cta.description}
-									width={{ base: '100px', md: '200px' }}
-									height={{ base: '100px', md: '200px' }}
+									width={{ base: '200px', md: '200px' }}
+									height={{ base: '200px', md: '200px' }}
 									borderRadius="3xl"
 									padding={8}
 									alignSelf={cta.alignSelf}
@@ -343,7 +342,7 @@ export function Home() {
 									alignItems="center"
 									marginRight={!!cta.marginRight ? cta.marginRight : undefined}
 									// add ligh and dark mode condition here
-									backgroundColor="background-hero"
+									backgroundColor="white"
 									zIndex={2}
 								>
 									<Box border="2px solid" borderColor={cta.color} px={4} py={2} borderRadius="3xl">
@@ -366,13 +365,63 @@ export function Home() {
 								borderRight="3px solid"
 								borderBottom="3px solid"
 								borderStyle="dashed"
+								borderColor="green.300"
 								borderRightRadius="full"
 								transform="rotate(-15deg) translate(15%)"
 							/>
 						</VStack>
+
+						{/* refactor button and reutilize */}
+						<Button
+							borderRadius="full"
+							px={8}
+							py={4}
+							variant="solid"
+							colorScheme="green"
+							width="fit-content"
+							alignSelf="center"
+						>
+							Começar Agora!
+						</Button>
 					</VStack>
 				}
-				rightSection={<></>}
+				rightSection={
+					<>
+						{/* refactor this section */}
+						<Center
+							width="full"
+							height="full"
+							position="relative"
+							flexGrow={1}
+							overflow={{ base: 'hidden', lg: 'inherit' }}
+						>
+							<Img
+								src="images/landing/how-img1.jpeg"
+								width="50%"
+								height="50%"
+								maxWidth="384px"
+								borderRadius="2xl"
+								zIndex={2}
+								position="absolute"
+								bottom={8}
+								left={{ base: 10, md: 20 }}
+							/>
+							<Img
+								src="images/landing/how-img2.jpeg"
+								width="50%"
+								height="70%"
+								maxWidth="384px"
+								maxHeight="400px"
+								borderRadius="2xl"
+								border="4px solid #fff"
+								position="absolute"
+								zIndex={1}
+								transform="rotate(15deg)"
+								right={{ base: 16, lg: 30 }}
+							/>
+						</Center>
+					</>
+				}
 			/>
 		</Fragment>
 	)
