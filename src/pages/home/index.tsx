@@ -59,12 +59,18 @@ export function Home() {
 							</Text>
 						</Flex>
 
-						<Flex justifyContent="center" py={4}>
-							<Button borderRadius="full" px={8} py={4} variant="outline" colorScheme="green" width="fit-content">
-								Saiba mais
-								<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
-							</Button>
-						</Flex>
+						<Button
+							borderRadius="full"
+							px={8}
+							py={4}
+							variant="outline"
+							colorScheme="green"
+							width="fit-content"
+							alignSelf="center"
+						>
+							Saiba mais
+							<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
+						</Button>
 					</Flex>
 				}
 				rightSection={
