@@ -190,13 +190,23 @@ export function Home() {
 						py={{ base: 4, lg: 0 }}
 					>
 						{Home.HowRight.map((how, i) => (
-							<Flex key={i} px={12} gap={4} flexDirection="column">
+							<Flex
+								key={i}
+								px={12}
+								gap={4}
+								flexDirection="column"
+								opacity={0.6}
+								_hover={{
+									opacity: 1,
+									transition: 0.5,
+								}}
+							>
 								<Text fontFamily="heading" fontSize="4xl" color="black">
 									{how.title}
 								</Text>
 								<Text>{how.description}</Text>
 
-								<Divider />
+								<Divider border="2px solid" borderColor="green.200" borderRadius="full" />
 							</Flex>
 						))}
 					</Flex>
