@@ -330,7 +330,7 @@ export function Home() {
 							Pronto Para Começar?
 						</Heading>
 
-						<VStack flexDirection="column" gap={8}>
+						<VStack flexDirection="column" gap={8} overflow="hidden" position="relative">
 							{Home.BottomCTA.map((cta) => (
 								<VStack
 									key={cta.description}
@@ -344,9 +344,10 @@ export function Home() {
 									marginRight={!!cta.marginRight ? cta.marginRight : undefined}
 									// add ligh and dark mode condition here
 									backgroundColor="background-hero"
+									zIndex={2}
 								>
 									<Box border="2px solid" borderColor={cta.color} px={4} py={2} borderRadius="3xl">
-										<Text fontSize="4xl" fontFamily="heading">
+										<Text fontSize="4xl" fontFamily="heading" color={cta.color}>
 											{cta.step}
 										</Text>
 									</Box>
@@ -355,6 +356,19 @@ export function Home() {
 									</Text>
 								</VStack>
 							))}
+
+							<Box
+								width="80%"
+								height="80%"
+								position="absolute"
+								zIndex={1}
+								borderTop="3px solid"
+								borderRight="3px solid"
+								borderBottom="3px solid"
+								borderStyle="dashed"
+								borderRightRadius="full"
+								transform="rotate(-30deg) translate(-15%)"
+							/>
 						</VStack>
 					</VStack>
 				}
@@ -404,7 +418,7 @@ export namespace Home {
 	]
 
 	export const BottomCTA = [
-		{ step: '01', description: 'Cadastre-se em poucos minutos', color: 'green.200', alignSelf: 'flex-start' },
+		{ step: '01', description: 'Cadastre-se em poucos minutos', color: 'blue.200', alignSelf: 'flex-start' },
 		{
 			step: '02',
 			description: 'Iremos verificar os seus dados',
