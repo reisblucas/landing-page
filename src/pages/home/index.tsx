@@ -14,7 +14,7 @@ export function Home() {
 		<Fragment>
 			<SectionSplit
 				hasPaddingXOnLeft
-				left={
+				leftSection={
 					<Flex flexDirection="column" height={{ base: '100vh', lg: '80vh' }} justifyContent="center">
 						<Show below="md">
 							<Flex w="full" py={2} justifyContent="center" alignItems="center">
@@ -67,7 +67,7 @@ export function Home() {
 						</Flex>
 					</Flex>
 				}
-				right={
+				rightSection={
 					<Show above="lg">
 						<Flex flexDirection="column" h={{ base: '768px', lg: 'full' }} borderTopRadius={32} justifyContent="center">
 							<Img src="images/landing/lorem-logo.png" maxW="50%" maxH="50%" m="0 auto" />
@@ -135,7 +135,7 @@ export function Home() {
 			{/* how section */}
 			<SectionSplit
 				hasPaddingXOnLeft
-				left={
+				leftSection={
 					<Flex
 						flexDirection="column"
 						minHeight={{ base: '500px', md: '768px' }}
@@ -181,7 +181,7 @@ export function Home() {
 					</Flex>
 				}
 				hasPaddingXOnRight
-				right={
+				rightSection={
 					<Flex
 						flexDirection="column"
 						minHeight={{ base: '500px', md: '768px' }}
