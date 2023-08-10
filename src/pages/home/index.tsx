@@ -1,9 +1,9 @@
-import { Box, Center, Flex, Heading, Text, VStack } from '@chakra-ui/react'
+import { Box, Center, Text, VStack } from '@chakra-ui/react'
 import { Fragment } from 'react'
 
-import { ButtonHero, DoctorGradient, Section, SectionSplit } from '@/ui'
+import { ButtonHero, DoctorGradient, SectionSplit } from '@/ui'
 import { useColorsThemeBased } from '@/helpers'
-import { Banner, CTAMiddle, PainSection, WhySection } from '@/components'
+import { Banner, CTAMiddle, HowSection, PainSection, WhySection } from '@/components'
 
 export function Home() {
 	const theming = useColorsThemeBased()
@@ -14,33 +14,7 @@ export function Home() {
 			<PainSection />
 			<WhySection />
 			<CTAMiddle />
-
-			{/* How section */}
-			<Section hasPaddingX justifyContent="center" backgroundColor={theming.bgSection} borderTopRadius="3xl" id="how">
-				<Flex width={{ base: '80%', md: '50%' }} justifyContent="center" m="0 auto" flexDirection="column" gap={4}>
-					<Heading as="h2" fontSize={{ base: '4xl', lg: '6xl' }} fontWeight="light" textAlign="center">
-						Gerencie Facilmente
-						<br />A Sua{' '}
-						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="green.200" px={4}>
-							Vida
-						</Text>
-						,
-						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="blue.200" px={4}>
-							Trabalho
-						</Text>{' '}
-						&{' '}
-						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="red.200" px={4}>
-							Família
-						</Text>
-					</Heading>
-
-					<Text fontSize={{ base: 'inherit', md: 'sm' }}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, eligendi, exercitationem ea eum tempora
-						odit est quos nostrum pariatur ipsam molestiae maxime dolor quia officiis rem praesentium accusamus vero
-						non?
-					</Text>
-				</Flex>
-			</Section>
+			<HowSection />
 
 			{/* Another Call to Action */}
 			<SectionSplit
