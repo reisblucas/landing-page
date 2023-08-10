@@ -5,7 +5,7 @@ import { ButtonHero } from '../general'
 
 export function Navlinks() {
 	return (
-		<List gap={4} display={{ base: 'none', lg: 'flex' }} m={0}>
+		<List gap={4} display={{ base: 'none', lg: 'flex' }} m={0} alignItems="center">
 			{Navlinks.links.map(({ href, title }) => (
 				<ListItem
 					key={href}
