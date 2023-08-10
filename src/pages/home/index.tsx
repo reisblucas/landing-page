@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react'
 import { FaArrowDown, FaArrowRight, FaCheck } from 'react-icons/fa'
 import { Fragment } from 'react'
+import { HashLink } from 'react-router-hash-link'
 
 import { Section, SectionSplit } from '@/ui'
 import { useColorsThemeBased } from '@/helpers'
@@ -31,18 +32,20 @@ export function Home() {
 			<SectionSplit
 				hasPaddingXOnLeft
 				ctaButton={
-					<Button
-						borderRadius="full"
-						px={8}
-						py={4}
-						variant="outline"
-						colorScheme="green"
-						width="fit-content"
-						alignSelf="center"
-					>
-						Saiba mais
-						<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
-					</Button>
+					<HashLink smooth to="#pain">
+						<Button
+							borderRadius="full"
+							px={8}
+							py={4}
+							variant="outline"
+							colorScheme="green"
+							width="fit-content"
+							alignSelf="center"
+						>
+							Saiba mais
+							<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
+						</Button>
+					</HashLink>
 				}
 				leftSection={
 					<Flex flexDirection="column" height={{ lg: '80vh' }} justifyContent="center" bg={theming.bgHero}>
@@ -88,19 +91,6 @@ export function Home() {
 								+ 1000 médicos
 							</Text>
 						</Flex>
-
-						{/* <Button
-							borderRadius="full"
-							px={8}
-							py={4}
-							variant="outline"
-							colorScheme="green"
-							width="fit-content"
-							alignSelf="center"
-						>
-							Saiba mais
-							<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
-						</Button> */}
 					</Flex>
 				}
 				rightSection={
@@ -113,7 +103,14 @@ export function Home() {
 			/>
 
 			{/* Pain section */}
-			<Section backgroundColor={theming.bgSection} gap={8} borderTopRadius="3xl" borderBottomRadius="3xl" hasPaddingX>
+			<Section
+				backgroundColor={theming.bgSection}
+				gap={8}
+				borderTopRadius="3xl"
+				borderBottomRadius="3xl"
+				hasPaddingX
+				id="pain"
+			>
 				<Heading
 					as="h2"
 					fontSize={{ base: '4xl', md: '6xl' }}
@@ -169,6 +166,7 @@ export function Home() {
 
 			{/* how section */}
 			<SectionSplit
+				id="socialProof"
 				hasPaddingXOnLeft
 				heading="Providenciamos A Ajuda Que Você Precisa"
 				leftSection={
@@ -316,7 +314,7 @@ export function Home() {
 			</Section>
 
 			{/* How section */}
-			<Section hasPaddingX justifyContent="center" backgroundColor={theming.bgSection} borderTopRadius="3xl">
+			<Section hasPaddingX justifyContent="center" backgroundColor={theming.bgSection} borderTopRadius="3xl" id="how">
 				<Flex width={{ base: '80%', md: '50%' }} justifyContent="center" m="0 auto" flexDirection="column" gap={4}>
 					<Heading as="h2" fontSize={{ base: '4xl', lg: '6xl' }} fontWeight="light" textAlign="center">
 						Gerencie Facilmente
@@ -348,6 +346,7 @@ export function Home() {
 				hasPaddingXOnLeft
 				backgroundColor={theming.bgSection}
 				heading="Pronto Para Começar?"
+				id="start"
 				leftSection={
 					<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="1024px">
 						<VStack flexDirection="column" gap={8} overflow="hidden" position="relative">

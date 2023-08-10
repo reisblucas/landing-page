@@ -1,4 +1,5 @@
-import { Box, Link, List, ListItem } from '@chakra-ui/react'
+import { Box, List, ListItem } from '@chakra-ui/react'
+import { HashLink } from 'react-router-hash-link'
 
 export function Navlinks() {
 	return (
@@ -11,17 +12,19 @@ export function Navlinks() {
 						a: {
 							opacity: 1,
 							textDecoration: 'none',
-							transition: 'all 0.8s ease-in-out',
+							transition: 'all 0.5s ease-in-out',
 						},
 						div: {
 							opacity: 1,
-							transition: 'all 0.8s ease-in-out',
+							transition: 'all 0.5s ease-in-out',
 						},
 					}}
 				>
-					<Link href={href} px={2} opacity={0.6}>
-						{title}
-					</Link>
+					<HashLink smooth to={href}>
+						<Box px={2} opacity={0.6}>
+							{title}
+						</Box>
+					</HashLink>
 					<Box height={0.5} backgroundColor="green.500" opacity={0} />
 				</ListItem>
 			))}
@@ -31,7 +34,7 @@ export function Navlinks() {
 
 export namespace Navlinks {
 	export const links = [
-		{ href: '#begin', title: 'Início' },
+		{ href: '#', title: 'Início' },
 		{ href: '#pain', title: 'Atuação' },
 		{ href: '#socialProof', title: 'Como Te Ajudamos' },
 		{ href: '#how', title: 'Como Cadastrar' },
