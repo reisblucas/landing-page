@@ -13,7 +13,7 @@ export function SectionSplit({
 	...flexProps
 }: SectionSplit.Props) {
 	return (
-		<Flex w="full" py={gpySection} flexDirection="column" justifyContent="center" {...flexProps}>
+		<Flex w="full" py={gpySection} flexDirection="column" justifyContent="center" {...flexProps} gap={4}>
 			{heading && (
 				<Heading
 					as="h2"
