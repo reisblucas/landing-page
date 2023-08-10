@@ -16,6 +16,7 @@ import { FaArrowDown, FaArrowRight, FaCheck } from 'react-icons/fa'
 import { Fragment } from 'react'
 
 import { Section, SectionSplit } from '@/ui'
+import { useColorsThemeBased } from '@/helpers'
 
 export function Home() {
 	const businessName = 'Lorem'
@@ -23,12 +24,19 @@ export function Home() {
 	const cm = useColorMode()
 	const callToActionBg = cm.colorMode === 'light' ? 'white' : 'blue.900'
 
+	const theming = useColorsThemeBased()
+
 	return (
 		<Fragment>
 			<SectionSplit
 				hasPaddingXOnLeft
 				leftSection={
-					<Flex flexDirection="column" height={{ base: '100vh', lg: '80vh' }} justifyContent="center">
+					<Flex
+						flexDirection="column"
+						height={{ base: '100vh', lg: '80vh' }}
+						justifyContent="center"
+						bg={theming.bgHero}
+					>
 						<Show below="lg">
 							<Flex w="full" py={2} justifyContent="center" alignItems="center">
 								<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
@@ -96,7 +104,7 @@ export function Home() {
 			/>
 
 			{/* Pain section */}
-			<Section backgroundColor="#fcf1e0" gap={8} borderTopRadius="3xl" hasPaddingX>
+			<Section backgroundColor={theming.bgSection} gap={8} borderTopRadius="3xl" borderBottomRadius="3xl" hasPaddingX>
 				<Heading
 					as="h2"
 					fontSize={{ base: '4xl', md: '6xl' }}
@@ -127,7 +135,7 @@ export function Home() {
 							justifyContent="center"
 							alignItems="center"
 							p={4}
-							backgroundColor="background-hero"
+							backgroundColor={theming.bgHero}
 							_hover={{
 								boxShadow:
 									'rgba(56, 161, 105, 0.4) -5px 5px, rgba(56, 161, 105, 0.3) -10px 10px, rgba(56, 161, 105, 0.2) -15px 15px, rgba(56, 161, 105, 0.1) -20px 20px, rgba(56, 161, 105, 0.05) -25px 25px',
@@ -189,7 +197,8 @@ export function Home() {
 								maxWidth="384px"
 								maxHeight="400px"
 								borderRadius="2xl"
-								border="4px solid #fff"
+								border="4px solid"
+								borderColor={theming.bgSection}
 								position="absolute"
 								zIndex={1}
 								transform="rotate(15deg)"
@@ -293,7 +302,7 @@ export function Home() {
 			</Section>
 
 			{/* How section */}
-			<Section hasPaddingX justifyContent="center" backgroundColor="#fcf1e0" borderTopRadius="3xl">
+			<Section hasPaddingX justifyContent="center" backgroundColor={theming.bgSection} borderTopRadius="3xl">
 				<Flex width={{ base: '80%', md: '50%' }} justifyContent="center" m="0 auto" flexDirection="column" gap={4}>
 					<Heading as="h2" fontSize={{ base: '4xl', lg: '6xl' }} fontWeight="light" textAlign="center">
 						Gerencie Facilmente
@@ -323,7 +332,7 @@ export function Home() {
 			<SectionSplit
 				hasPaddingXOnRight
 				hasPaddingXOnLeft
-				backgroundColor="#fcf1e0"
+				backgroundColor={theming.bgSection}
 				leftSection={
 					<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="1024px">
 						<Heading as="h2" fontSize={{ base: '3xl', md: '5xl' }} fontWeight="light">
@@ -342,7 +351,7 @@ export function Home() {
 									alignItems="center"
 									marginRight={!!cta.marginRight ? cta.marginRight : undefined}
 									// add ligh and dark mode condition here
-									backgroundColor="white"
+									backgroundColor={theming.bgHero}
 									zIndex={2}
 								>
 									<Box border="2px solid" borderColor={cta.color} px={4} py={2} borderRadius="3xl">
@@ -413,7 +422,8 @@ export function Home() {
 								maxWidth="384px"
 								maxHeight="400px"
 								borderRadius="2xl"
-								border="4px solid #fff"
+								border="4px solid"
+								borderColor={theming.bgHero}
 								position="absolute"
 								zIndex={1}
 								transform="rotate(15deg)"
