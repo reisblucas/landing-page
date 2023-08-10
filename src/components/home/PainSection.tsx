@@ -1,7 +1,7 @@
-import { useColorsThemeBased } from '@/helpers'
-import { Home } from '@/pages/home'
-import { Section } from '@/ui'
 import { Heading, Flex, Box, Text } from '@chakra-ui/react'
+
+import { useColorsThemeBased } from '@/helpers'
+import { Section } from '@/ui'
 
 export function PainSection() {
 	const theming = useColorsThemeBased()
@@ -28,7 +28,7 @@ export function PainSection() {
 				alignItems="center"
 				wrap="wrap"
 			>
-				{Home.Pains.map((pain) => (
+				{PainSection.pains.map((pain) => (
 					<Flex
 						key={pain.title}
 						flexDirection="column"
@@ -62,4 +62,13 @@ export function PainSection() {
 			</Text>
 		</Section>
 	)
+}
+
+export namespace PainSection {
+	export const pains = [
+		{ title: 'Lorem', icon: '', description: '...' },
+		{ title: 'Ipsum', icon: '', description: '...' },
+		{ title: 'Dolor', icon: '', description: '...' },
+		{ title: 'Sit', icon: '', description: '...' },
+	]
 }
