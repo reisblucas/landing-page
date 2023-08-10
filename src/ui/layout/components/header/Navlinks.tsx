@@ -32,10 +32,10 @@ export function Navlinks() {
 export namespace Navlinks {
 	export const links = [
 		{ href: '#begin', title: 'Início' },
-		{ href: '#plataform', title: 'Plataforma' },
-		{ href: '#business', title: 'A empresa' },
-		{ href: '#testimony', title: 'Depoimentos' },
-		{ href: '#questions', title: 'Perguntas frequentes' },
+		{ href: '#pain', title: 'Atuação' },
+		{ href: '#socialProof', title: 'Como Te Ajudamos' },
+		{ href: '#how', title: 'Como Cadastrar' },
+		{ href: '#questions', title: 'Perguntas Frequentes' },
 		{ href: '#start', title: 'Começar' },
 	]
 }
