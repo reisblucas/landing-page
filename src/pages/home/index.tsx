@@ -223,13 +223,21 @@ export function Home() {
 								px={12}
 								gap={4}
 								flexDirection="column"
-								opacity={0.6}
+								opacity={{ base: 1, lg: 0.5 }}
 								_hover={{
-									opacity: 1,
-									transition: 0.5,
+									lg: {
+										transition: 0.5,
+										_notFirst: {
+											opacity: 1,
+										},
+										_notLast: {
+											opacity: 1,
+										},
+										opacity: 1,
+									},
 								}}
 							>
-								<Text fontFamily="heading" fontSize="4xl" color="black">
+								<Text fontFamily="heading" fontSize="4xl">
 									{how.title}
 								</Text>
 								<Text>{how.description}</Text>
@@ -335,7 +343,7 @@ export function Home() {
 				backgroundColor={theming.bgSection}
 				leftSection={
 					<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="1024px">
-						<Heading as="h2" fontSize={{ base: '3xl', md: '5xl' }} fontWeight="light">
+						<Heading as="h2" fontSize={{ base: '3xl', md: '5xl' }} fontWeight="light" textAlign="center">
 							Pronto Para Começar?
 						</Heading>
 						<VStack flexDirection="column" gap={8} overflow="hidden" position="relative">
