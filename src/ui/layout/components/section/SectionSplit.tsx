@@ -9,6 +9,7 @@ export function SectionSplit({
 	hasPaddingXOnLeft,
 	hasPaddingXOnRight,
 	heading,
+	ctaButton,
 	...flexProps
 }: SectionSplit.Props) {
 	return (
@@ -36,6 +37,8 @@ export function SectionSplit({
 					{rightSection}
 				</Flex>
 			</Flex>
+
+			{ctaButton && <Flex justifyContent="center">{ctaButton}</Flex>}
 		</Flex>
 	)
 }
@@ -47,5 +50,6 @@ export namespace SectionSplit {
 		hasPaddingXOnLeft?: boolean
 		hasPaddingXOnRight?: boolean
 		heading?: string
+		ctaButton?: ReactNode
 	}
 }

@@ -30,6 +30,20 @@ export function Home() {
 		<Fragment>
 			<SectionSplit
 				hasPaddingXOnLeft
+				ctaButton={
+					<Button
+						borderRadius="full"
+						px={8}
+						py={4}
+						variant="outline"
+						colorScheme="green"
+						width="fit-content"
+						alignSelf="center"
+					>
+						Saiba mais
+						<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
+					</Button>
+				}
 				leftSection={
 					<Flex
 						flexDirection="column"
@@ -80,7 +94,7 @@ export function Home() {
 							</Text>
 						</Flex>
 
-						<Button
+						{/* <Button
 							borderRadius="full"
 							px={8}
 							py={4}
@@ -91,7 +105,7 @@ export function Home() {
 						>
 							Saiba mais
 							<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
-						</Button>
+						</Button> */}
 					</Flex>
 				}
 				rightSection={
