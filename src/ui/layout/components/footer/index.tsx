@@ -1,4 +1,4 @@
-import { Box, IconButton, Flex, HStack, Text, VStack, Link } from '@chakra-ui/react'
+import { Box, IconButton, Flex, HStack, Text, VStack, Link, Divider } from '@chakra-ui/react'
 
 import { gpx, gpySection } from '@/ui/patterns'
 import { useColorsThemeBased } from '@/helpers'
@@ -11,15 +11,17 @@ export function Footer() {
 
 	return (
 		<Box width="full" px={gpx} backgroundColor={theming.bgSection}>
-			<Box backgroundColor={theming.bgHero} borderTopRadius="3xl" maxW={{ md: '80vw' }} m="0 auto">
-				<Flex
-					px={16}
-					py={gpySection}
-					flexDirection={{ base: 'column', md: 'row' }}
-					justifyContent="space-between"
-					alignItems="center"
-					gap={8}
-				>
+			<VStack
+				backgroundColor={theming.bgHero}
+				borderTopRadius="3xl"
+				maxW={{ md: '80vw' }}
+				m="0 auto"
+				px={16}
+				py={gpySection}
+				alignItems="stretch"
+				gap={6}
+			>
+				<Flex flexDirection={{ base: 'column', md: 'row' }} justifyContent="space-between" alignItems="center" gap={8}>
 					<VStack alignItems="flex-start" gap={8}>
 						<VStack gap={4} maxWidth="160px">
 							<Flex flexDirection="column" gap={2}>
@@ -103,7 +105,22 @@ export function Footer() {
 						</VStack>
 					</HStack>
 				</Flex>
-			</Box>
+
+				<Divider borderRadius="full" borderY="1px" borderColor={theming.bgSection} />
+
+				<Flex flexDirection="column" gap={4} alignItems="center">
+					<Flex gap={4} textDecoration="underline">
+						<Link>
+							<Text>Política de Privacidade</Text>
+						</Link>
+						<Link>
+							<Text>Termos de Uso</Text>
+						</Link>
+					</Flex>
+
+					<Text textAlign="center">&copy; Lorem - Todos os direitos reservados</Text>
+				</Flex>
+			</VStack>
 		</Box>
 	)
 }
