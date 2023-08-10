@@ -250,7 +250,7 @@ export function Home() {
 							Economize Dinheiro Como Nunca Antes
 						</Heading>
 
-						<ButtonHero description="Começar" icon={FaArrowRight} />
+						<ButtonHero description="Começar" icon={FaArrowRight} alignSelf="center" />
 
 						<Flex
 							gap={2}
