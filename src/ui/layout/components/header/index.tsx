@@ -5,6 +5,7 @@ import { ColorModeSwitcher, gpx } from '@/ui/patterns'
 import { Logo } from './Logo'
 import { Navlinks } from './Navlinks'
 import { useColorsThemeBased, useScrollYPosition } from '@/helpers'
+import { Hamburger } from './Hamburger'
 
 export function Header() {
 	const theming = useColorsThemeBased()
@@ -29,6 +30,7 @@ export function Header() {
 
 			<Flex gap={2} alignItems="center">
 				<ColorModeSwitcher size="xs" />
+				<Hamburger />
 				<Navlinks />
 			</Flex>
 		</Flex>
