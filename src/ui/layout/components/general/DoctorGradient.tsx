@@ -10,11 +10,11 @@ export function DoctorGradient() {
 				alt="Doutora sorrindo, vestida com um jaleco junto do estetoscópio, está segurando e olhando para o iPad"
 			/>
 			<Box
-				w={{ base: '85%', md: '50%' }}
+				w={{ base: '85%', md: '80%' }}
 				h="50%"
 				position="absolute"
 				bottom={{ base: 32, md: 32 }}
-				left={{ base: 12, md: 44 }}
+				left={{ base: 12, md: 20 }}
 				borderTopRadius="16rem"
 				bgGradient={`repeating-linear-gradient(
       180deg,

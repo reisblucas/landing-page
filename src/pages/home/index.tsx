@@ -3,7 +3,7 @@ import { FaArrowDown, FaArrowRight, FaCheck } from 'react-icons/fa'
 import { Fragment } from 'react'
 import { HashLink } from 'react-router-hash-link'
 
-import { ButtonHero, Section, SectionSplit } from '@/ui'
+import { ButtonHero, DoctorGradient, Section, SectionSplit } from '@/ui'
 import { useColorsThemeBased } from '@/helpers'
 
 export function Home() {
@@ -335,7 +335,6 @@ export function Home() {
 									justifyContent="center"
 									alignItems="center"
 									marginRight={!!cta.marginRight ? cta.marginRight : undefined}
-									// add ligh and dark mode condition here
 									backgroundColor={theming.bgHero}
 									zIndex={2}
 								>
@@ -376,31 +375,7 @@ export function Home() {
 							flexGrow={1}
 							overflow={{ base: 'hidden', lg: 'inherit' }}
 						>
-							<Img
-								src="images/landing/how-img1.jpeg"
-								width="50%"
-								height="50%"
-								maxWidth="384px"
-								borderRadius="2xl"
-								zIndex={2}
-								position="absolute"
-								bottom={8}
-								left={{ base: 10, md: 20 }}
-							/>
-							<Img
-								src="images/landing/how-img2.jpeg"
-								width="50%"
-								height="70%"
-								maxWidth="384px"
-								maxHeight="400px"
-								borderRadius="2xl"
-								border="4px solid"
-								borderColor={theming.bgHero}
-								position="absolute"
-								zIndex={1}
-								transform="rotate(15deg)"
-								right={{ base: 16, lg: 30 }}
-							/>
+							<DoctorGradient />
 						</Center>
 					</>
 				}
