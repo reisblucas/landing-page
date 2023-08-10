@@ -27,7 +27,7 @@ export function Header() {
 		>
 			<Logo />
 
-			<Flex gap={4} alignItems="center">
+			<Flex gap={2} alignItems="center">
 				<ColorModeSwitcher size="xs" />
 				<Navlinks />
 			</Flex>
