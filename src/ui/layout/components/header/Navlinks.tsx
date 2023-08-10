@@ -1,6 +1,8 @@
 import { Box, List, ListItem } from '@chakra-ui/react'
 import { HashLink } from 'react-router-hash-link'
 
+import { ButtonHero } from '../general'
+
 export function Navlinks() {
 	return (
 		<List gap={4} display={{ base: 'none', lg: 'flex' }} m={0}>
@@ -28,6 +30,10 @@ export function Navlinks() {
 					<Box height={0.5} backgroundColor="green.500" opacity={0} />
 				</ListItem>
 			))}
+
+			<HashLink smooth to="#start">
+				<ButtonHero description="Começar" variant="solid" />
+			</HashLink>
 		</List>
 	)
 }
@@ -39,6 +45,5 @@ export namespace Navlinks {
 		{ href: '#socialProof', title: 'Como Te Ajudamos' },
 		{ href: '#how', title: 'Como Cadastrar' },
 		{ href: '#questions', title: 'Perguntas Frequentes' },
-		{ href: '#start', title: 'Começar' },
 	]
 }
