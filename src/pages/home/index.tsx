@@ -327,7 +327,7 @@ export function Home() {
 							Trabalho
 						</Text>{' '}
 						&{' '}
-						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="yellow.200" px={4}>
+						<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="red.200" px={4}>
 							Família
 						</Text>
 					</Heading>
