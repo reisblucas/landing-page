@@ -161,6 +161,7 @@ export function Home() {
 			{/* how section */}
 			<SectionSplit
 				hasPaddingXOnLeft
+				heading="Providenciamos A Ajuda Que Você Precisa"
 				leftSection={
 					<Flex
 						flexDirection="column"
@@ -168,10 +169,6 @@ export function Home() {
 						justifyContent="space-evenly"
 						alignItems="center"
 					>
-						<Heading as="h2" fontFamily="heading" fontSize={{ base: '4xl', md: '6xl' }} fontWeight="light">
-							Providenciamos A Ajuda Que Você Precisa
-						</Heading>
-
 						<Center
 							width="full"
 							height="full"
@@ -341,11 +338,9 @@ export function Home() {
 				hasPaddingXOnRight
 				hasPaddingXOnLeft
 				backgroundColor={theming.bgSection}
+				heading="Pronto Para Começar?"
 				leftSection={
 					<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="1024px">
-						<Heading as="h2" fontSize={{ base: '3xl', md: '5xl' }} fontWeight="light" textAlign="center">
-							Pronto Para Começar?
-						</Heading>
 						<VStack flexDirection="column" gap={8} overflow="hidden" position="relative">
 							{Home.BottomCTA.map((cta) => (
 								<VStack
