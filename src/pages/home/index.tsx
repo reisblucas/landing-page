@@ -1,22 +1,9 @@
-import {
-	Box,
-	Button,
-	Center,
-	Divider,
-	Flex,
-	Heading,
-	Icon,
-	Img,
-	Show,
-	Text,
-	VStack,
-	useColorMode,
-} from '@chakra-ui/react'
+import { Box, Center, Divider, Flex, Heading, Icon, Img, Show, Text, VStack, useColorMode } from '@chakra-ui/react'
 import { FaArrowDown, FaArrowRight, FaCheck } from 'react-icons/fa'
 import { Fragment } from 'react'
 import { HashLink } from 'react-router-hash-link'
 
-import { Section, SectionSplit } from '@/ui'
+import { ButtonHero, Section, SectionSplit } from '@/ui'
 import { useColorsThemeBased } from '@/helpers'
 
 export function Home() {
@@ -33,18 +20,7 @@ export function Home() {
 				hasPaddingXOnLeft
 				ctaButton={
 					<HashLink smooth to="#pain">
-						<Button
-							borderRadius="full"
-							px={8}
-							py={4}
-							variant="outline"
-							colorScheme="green"
-							width="fit-content"
-							alignSelf="center"
-						>
-							Saiba mais
-							<Icon as={FaArrowDown} stroke="background-hero" ml={4} />
-						</Button>
+						<ButtonHero description="Saiba mais" icon={FaArrowDown} />
 					</HashLink>
 				}
 				leftSection={
@@ -274,10 +250,7 @@ export function Home() {
 							Economize Dinheiro Como Nunca Antes
 						</Heading>
 
-						<Button borderRadius="full" px={8} py={4} variant="outline" colorScheme="green" width="fit-content">
-							Começar
-							<Icon as={FaArrowRight} ml={4} />
-						</Button>
+						<ButtonHero description="Começar" icon={FaArrowRight} />
 
 						<Flex
 							gap={2}
@@ -347,6 +320,7 @@ export function Home() {
 				backgroundColor={theming.bgSection}
 				heading="Pronto Para Começar?"
 				id="start"
+				ctaButton={<ButtonHero description="Começar Agora" variant="solid" />}
 				leftSection={
 					<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="1024px">
 						<VStack flexDirection="column" gap={8} overflow="hidden" position="relative">
@@ -390,19 +364,6 @@ export function Home() {
 								transform="rotate(-15deg) translate(15%)"
 							/>
 						</VStack>
-
-						{/* refactor button and reutilize */}
-						<Button
-							borderRadius="full"
-							px={8}
-							py={4}
-							variant="solid"
-							colorScheme="green"
-							width="fit-content"
-							alignSelf="center"
-						>
-							Começar Agora!
-						</Button>
 					</VStack>
 				}
 				rightSection={
