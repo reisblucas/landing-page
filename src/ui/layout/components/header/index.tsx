@@ -4,8 +4,11 @@ import { ColorModeSwitcher, gpx } from '@/ui/patterns'
 
 import { Logo } from './Logo'
 import { Navlinks } from './Navlinks'
+import { useColorsThemeBased } from '@/helpers'
 
 export function Header() {
+	const theming = useColorsThemeBased()
+
 	return (
 		<Flex
 			width="full"
@@ -15,7 +18,7 @@ export function Header() {
 			alignItems="center"
 			position="sticky"
 			top={0}
-			backgroundColor="background-hero"
+			backgroundColor={theming.bgHero}
 			zIndex="sticky"
 		>
 			<Logo />
