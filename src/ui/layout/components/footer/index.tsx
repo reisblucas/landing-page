@@ -1,4 +1,4 @@
-import { Box, IconButton, Flex, HStack, Text, VStack } from '@chakra-ui/react'
+import { Box, IconButton, Flex, HStack, Text, VStack, Link } from '@chakra-ui/react'
 
 import { gpx, gpySection } from '@/ui/patterns'
 import { useColorsThemeBased } from '@/helpers'
@@ -11,8 +11,15 @@ export function Footer() {
 
 	return (
 		<Box width="full" px={gpx} backgroundColor={theming.bgSection}>
-			<Box backgroundColor={theming.bgHero} borderTopRadius="3xl">
-				<HStack px={16} py={gpySection} justifyContent="space-between">
+			<Box backgroundColor={theming.bgHero} borderTopRadius="3xl" maxW={{ md: '80vw' }} m="0 auto">
+				<Flex
+					px={16}
+					py={gpySection}
+					flexDirection={{ base: 'column', md: 'row' }}
+					justifyContent="space-between"
+					alignItems="center"
+					gap={8}
+				>
 					<VStack alignItems="flex-start" gap={8}>
 						<VStack gap={4} maxWidth="160px">
 							<Flex flexDirection="column" gap={2}>
@@ -41,12 +48,61 @@ export function Footer() {
 							</Flex>
 						</VStack>
 					</VStack>
-					<HStack>
-						<VStack></VStack>
-						<VStack></VStack>
-						<VStack></VStack>
+
+					<HStack gap={12} wrap="wrap">
+						<VStack alignItems="flex-start">
+							<Text fontFamily="heading" fontWeight="bold">
+								Lorem Oferece
+							</Text>
+							<Link>
+								<Text>Lorem</Text>
+							</Link>
+							<Link>
+								<Text>Ipsum</Text>
+							</Link>
+							<Link>
+								<Text>Dolor</Text>
+							</Link>
+							<Link>
+								<Text>Sit</Text>
+							</Link>
+						</VStack>
+						<VStack alignItems="flex-start">
+							<Text fontFamily="heading" fontWeight="bold">
+								Ferramentas
+							</Text>
+							<Link>
+								<Text>Lorem</Text>
+							</Link>
+							<Link>
+								<Text>Ipsum</Text>
+							</Link>
+							<Link>
+								<Text>Dolor</Text>
+							</Link>
+							<Link>
+								<Text>Sit</Text>
+							</Link>
+						</VStack>
+						<VStack alignItems="flex-start">
+							<Text fontFamily="heading" fontWeight="bold">
+								Sobre Nós
+							</Text>
+							<Link>
+								<Text>Lorem</Text>
+							</Link>
+							<Link>
+								<Text>Ipsum</Text>
+							</Link>
+							<Link>
+								<Text>Dolor</Text>
+							</Link>
+							<Link>
+								<Text>Sit</Text>
+							</Link>
+						</VStack>
 					</HStack>
-				</HStack>
+				</Flex>
 			</Box>
 		</Box>
 	)
