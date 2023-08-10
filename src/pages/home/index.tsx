@@ -45,12 +45,7 @@ export function Home() {
 					</Button>
 				}
 				leftSection={
-					<Flex
-						flexDirection="column"
-						height={{ base: '100vh', lg: '80vh' }}
-						justifyContent="center"
-						bg={theming.bgHero}
-					>
+					<Flex flexDirection="column" height={{ lg: '80vh' }} justifyContent="center" bg={theming.bgHero}>
 						<Show below="lg">
 							<Flex w="full" py={2} justifyContent="center" alignItems="center">
 								<Img src="images/landing/lorem-logo.png" maxW="80%" maxH="80%" />
