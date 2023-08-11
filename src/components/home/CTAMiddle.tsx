@@ -1,4 +1,4 @@
-import { Flex, Heading, Icon, Text } from '@chakra-ui/react'
+import { Flex, Heading, Icon, Text, keyframes } from '@chakra-ui/react'
 
 import { useColorsThemeBased } from '@/helpers'
 import { ButtonHero, Section } from '@/ui'
@@ -6,6 +6,13 @@ import { FaArrowRight, FaCheck } from 'react-icons/fa'
 
 export function CTAMiddle() {
 	const theming = useColorsThemeBased()
+
+	const animationKeyframes = keyframes`
+	0%   { transform: translateX(0); }
+  50%  { transform: translateX(-5px); }
+	100% { transform: translateX(0); }
+`
+	const animation = `${animationKeyframes} 1s ease-in-out infinite`
 
 	return (
 		<Section hasPaddingX alignItems="center">
@@ -28,7 +35,7 @@ export function CTAMiddle() {
 						Economize Dinheiro Como Nunca Antes
 					</Heading>
 
-					<ButtonHero description="Começar" icon={FaArrowRight} alignSelf="center" />
+					<ButtonHero description="Começar" icon={FaArrowRight} animation={animation} alignSelf="center" />
 
 					<Flex
 						gap={2}
