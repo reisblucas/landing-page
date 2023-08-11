@@ -1,5 +1,5 @@
 import { useColorMode } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 export function useColorsThemeBased() {
 	const { colorMode: cm } = useColorMode()
@@ -18,15 +18,17 @@ export function useColorsThemeBased() {
 export function useScrollYPosition() {
 	const [scroll, setScroll] = useState(window.scrollY || 0)
 
-	const handleScroll = () => {
-		setScroll(window.scrollY)
-	}
+	const handleScroll = useCallback(() => {
+		if (scroll !== window.scrollY) {
+			setScroll(window.scrollY)
+		}
+	}, [scroll])
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
 
 		return () => window.removeEventListener('scroll', handleScroll)
-	}, [scroll])
+	}, [handleScroll])
 
 	return [scroll] as const
 }
