@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 
-import { Banner, CTABottom, CTAMiddle, HowSection, PainSection, WhySection } from '@/components'
+import { Banner, CTABottom, CTAMiddle, CommonQuestions, HowSection, PainSection, WhySection } from '@/components'
 
 export function Home() {
 	return (
@@ -11,6 +11,7 @@ export function Home() {
 			<CTAMiddle />
 			<HowSection />
 			<CTABottom />
+			<CommonQuestions />
 		</Fragment>
 	)
 }
