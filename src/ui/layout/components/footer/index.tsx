@@ -40,7 +40,7 @@ export function Footer() {
 										<IconButton
 											icon={social.icon}
 											key={social.link}
-											aria-label="linkedin icon"
+											aria-label="social link"
 											colorScheme={social.colorScheme}
 											borderRadius="full"
 											variant="outline"
@@ -127,8 +127,8 @@ export function Footer() {
 
 export namespace Footer {
 	export const SocialLinks = [
-		{ link: 'linkedin', icon: <LinkedInIcon />, colorScheme: 'linkedin' },
-		{ link: 'instagram', icon: <InstagramIcon />, colorScheme: 'pink' },
-		{ link: 'twitter', icon: <TwitterIcon />, colorScheme: 'twitter' },
+		{ link: 'linkedin', icon: <LinkedInIcon />, colorScheme: 'grey' },
+		{ link: 'instagram', icon: <InstagramIcon />, colorScheme: 'grey' },
+		{ link: 'twitter', icon: <TwitterIcon />, colorScheme: 'grey' },
 	]
 }

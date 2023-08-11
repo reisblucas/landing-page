@@ -5,7 +5,7 @@ export const InstagramIcon = createIcon({
 	viewBox: '0 0 32 32',
 	defaultProps: {
 		boxSize: 6,
-		fill: 'purple',
+		fill: '#000',
 	},
 	path: (
 		<>
