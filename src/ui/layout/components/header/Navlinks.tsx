@@ -1,11 +1,11 @@
-import { Box, List, ListItem } from '@chakra-ui/react'
+import { Box, List, ListItem, ListProps } from '@chakra-ui/react'
 import { HashLink } from 'react-router-hash-link'
 
 import { ButtonHero } from '../general'
 
-export function Navlinks() {
+export function Navlinks({ drawerHashLinkSupport, ...listProps }: Navlinks.Props) {
 	return (
-		<List gap={4} display={{ base: 'none', lg: 'flex' }} m={0} alignItems="center">
+		<List gap={4} display="flex" m={0} alignItems="center" {...listProps}>
 			{Navlinks.links.map(({ href, title }) => (
 				<ListItem
 					key={href}
@@ -22,7 +22,7 @@ export function Navlinks() {
 						},
 					}}
 				>
-					<HashLink smooth to={href}>
+					<HashLink smooth to={href} onClick={drawerHashLinkSupport}>
 						<Box px={2} opacity={0.6}>
 							{title}
 						</Box>
@@ -31,7 +31,7 @@ export function Navlinks() {
 				</ListItem>
 			))}
 
-			<HashLink smooth to="#start">
+			<HashLink smooth to="#start" onClick={drawerHashLinkSupport}>
 				<ButtonHero description="Começar" variant="solid" />
 			</HashLink>
 		</List>
@@ -39,8 +39,12 @@ export function Navlinks() {
 }
 
 export namespace Navlinks {
+	export interface Props extends ListProps {
+		drawerHashLinkSupport?: () => void
+	}
+
 	export const links = [
-		{ href: '#', title: 'Início' },
+		{ href: '#banner', title: 'Início' },
 		{ href: '#pain', title: 'Atuação' },
 		{ href: '#socialProof', title: 'Como Te Ajudamos' },
 		{ href: '#how', title: 'Como Cadastrar' },
