@@ -11,9 +11,7 @@ export function Banner() {
 	const theming = useColorsThemeBased()
 
 	const animationKeyframes = keyframes`
-	0%   { transform: translateY(0); }
-  50%  { transform: translateY(-5px); }
-	100% { transform: translateY(0); }
+  50%  { transform: translateY(-3px); }
 `
 	const animation = `${animationKeyframes} 1s ease-in-out infinite`
 
