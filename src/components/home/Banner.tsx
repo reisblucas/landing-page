@@ -1,6 +1,7 @@
 import { Flex, Show, Img, Heading, Text } from '@chakra-ui/react'
 import { FaArrowDown } from 'react-icons/fa'
 import { HashLink } from 'react-router-hash-link'
+import Typewriter from 'typewriter-effect'
 
 import { useColorsThemeBased } from '@/helpers'
 import { SectionSplit, ButtonHero } from '@/ui'
@@ -26,10 +27,25 @@ export function Banner() {
 					</Show>
 
 					<Heading as="h1" size="4xl" fontWeight="light" pb={{ base: 4, md: 4 }}>
-						Finanças?
-						<br />
-						Burocracia?
-						<br />A {businessName} cuida para você!
+						<Typewriter
+							onInit={(typewriter) =>
+								typewriter
+									.typeString(
+										`Finanças?
+										<br />
+										Burocracia?
+										<br />
+										A ${businessName} cuida para você!`,
+									)
+									.callFunction(() => 'start typing')
+
+									.start()
+							}
+							options={{
+								autoStart: true,
+								delay: 50,
+							}}
+						/>
 					</Heading>
 
 					<Text fontSize={{ base: 'sm', md: 'md' }}>
