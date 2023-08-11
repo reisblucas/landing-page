@@ -27,6 +27,7 @@ export function Hamburger() {
 				aria-label="Hamburger botão para abrir o menu de navegação"
 				icon={<HamburgerIcon boxSize={6} stroke={theming.hamburgerIcon} />}
 				onClick={onOpen}
+				variant="ghost"
 			/>
 
 			<Drawer isOpen={isOpen} onClose={onClose}>
