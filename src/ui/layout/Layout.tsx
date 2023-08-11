@@ -9,7 +9,7 @@ export function Layout() {
 	const theming = useColorsThemeBased()
 
 	return (
-		<Box backgroundColor={theming.bgHero} width="full">
+		<Box id="banner" backgroundColor={theming.bgHero} width="full">
 			<Header />
 			<Outlet />
 			<Footer />
