@@ -1,21 +1,26 @@
-import { Flex, Show, Img, Heading, Text } from '@chakra-ui/react'
+import { Flex, Show, Img, Heading, Text, keyframes } from '@chakra-ui/react'
 import { FaArrowDown } from 'react-icons/fa'
 import { HashLink } from 'react-router-hash-link'
 import Typewriter from 'typewriter-effect'
 
 import { useColorsThemeBased } from '@/helpers'
-import { SectionSplit, ButtonHero } from '@/ui'
+import { ButtonHero, SectionSplit } from '@/ui'
 
 export function Banner() {
 	const businessName = 'Lorem'
 	const theming = useColorsThemeBased()
+
+	const animationKeyframes = keyframes`
+  50%  { transform: translateY(-3px); }
+`
+	const animation = `${animationKeyframes} 1s ease-in-out infinite`
 
 	return (
 		<SectionSplit
 			hasPaddingXOnLeft
 			ctaButton={
 				<HashLink smooth to="#pain">
-					<ButtonHero description="Saiba mais" icon={FaArrowDown} />
+					<ButtonHero description="Saiba mais" icon={FaArrowDown} stroke="black" animation={animation} />
 				</HashLink>
 			}
 			leftSection={

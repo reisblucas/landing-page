@@ -1,10 +1,16 @@
-import { Box, Center, Text, VStack } from '@chakra-ui/react'
+import { Box, Center, Text, VStack, keyframes } from '@chakra-ui/react'
 
 import { useColorsThemeBased } from '@/helpers'
 import { ButtonHero, DoctorGradient, SectionSplit } from '@/ui'
+import { motion } from 'framer-motion'
 
 export function CTABottom() {
 	const theming = useColorsThemeBased()
+
+	const animationKeyframes = keyframes`
+  50%  { transform: scale(1.05); }
+`
+	const animation = `${animationKeyframes} 1.5s ease-in-out infinite`
 
 	return (
 		<SectionSplit
@@ -13,7 +19,9 @@ export function CTABottom() {
 			backgroundColor={theming.bgSection}
 			heading="Pronto Para Começar?"
 			id="start"
-			ctaButton={<ButtonHero description="Começar Agora" variant="solid" />}
+			ctaButton={
+				<ButtonHero description="Começar Agora" variant="solid" animationParent={animation} as={motion.button} />
+			}
 			leftSection={
 				<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="1024px">
 					<VStack flexDirection="column" gap={8} overflow="hidden" position="relative">
