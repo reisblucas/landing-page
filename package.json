@@ -9,11 +9,11 @@
 		"pnpm": ">= 8.0.0"
 	},
 	"scripts": {
+		"prepublish": "[ \"$NODE_ENV\" = production ] && exit 0; husky install",
 		"start": "react-app-rewired start",
 		"build": "react-app-rewired build",
 		"test": "react-app-rewired test",
 		"eject": "react-scripts eject",
-		"prepare": "husky install",
 		"lint": "eslint --ext .ts,.tsx --max-warnings=0"
 	},
 	"dependencies": {
