@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Show } from '@chakra-ui/react'
 
 import { ColorModeSwitcher, gpx } from '@/ui/patterns'
 
@@ -31,7 +31,10 @@ export function Header() {
 			<Flex gap={2} alignItems="center">
 				<ColorModeSwitcher size="xs" />
 				<Hamburger />
-				<Navlinks />
+
+				<Show above="md">
+					<Navlinks />
+				</Show>
 			</Flex>
 		</Flex>
 	)
