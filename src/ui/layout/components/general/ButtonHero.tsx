@@ -1,7 +1,7 @@
 import { Button, ButtonProps, Icon } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 
-export function ButtonHero({ icon, description, animation, ...buttonProps }: ButtonHero.Props) {
+export function ButtonHero({ icon, description, animationParent, animation, ...buttonProps }: ButtonHero.Props) {
 	return (
 		<Button
 			borderRadius="full"
@@ -11,6 +11,7 @@ export function ButtonHero({ icon, description, animation, ...buttonProps }: But
 			colorScheme="green"
 			width="fit-content"
 			{...buttonProps}
+			animation={animationParent}
 		>
 			{description}
 			{icon && <Icon as={icon} stroke="background-hero" ml={4} animation={animation} />}
@@ -23,5 +24,6 @@ export namespace ButtonHero {
 		description: string
 		icon?: IconType
 		animation?: string
+		animationParent?: string
 	}
 }
