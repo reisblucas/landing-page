@@ -44,10 +44,10 @@ export namespace Navlinks {
 	}
 
 	export const links = [
-		{ href: '#banner', title: 'Início' },
-		{ href: '#pain', title: 'Atuação' },
-		{ href: '#socialProof', title: 'Como Te Ajudamos' },
-		{ href: '#how', title: 'Como Cadastrar' },
-		{ href: '#questions', title: 'Perguntas Frequentes' },
+		{ href: '#banner', title: 'Início' }, // 0 - 1052
+		{ href: '#pain', title: 'Atuação' }, // 1052 - 1624
+		{ href: '#socialProof', title: 'Como Te Ajudamos' }, // 1624 - 3162
+		{ href: '#how', title: 'Como Cadastrar' }, // 3162 - 4331
+		{ href: '#questions', title: 'Perguntas Frequentes' }, // 4331
 	]
 }
