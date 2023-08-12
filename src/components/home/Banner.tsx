@@ -45,6 +45,7 @@ export function Banner() {
 									.callFunction(() => 'start typing')
 
 									.start()
+									.callFunction((thisArg) => thisArg.elements.cursor.remove())
 							}
 							options={{
 								autoStart: true,
