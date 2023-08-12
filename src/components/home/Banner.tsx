@@ -17,6 +17,7 @@ export function Banner() {
 
 	return (
 		<SectionSplit
+			id="banner"
 			hasPaddingXOnLeft
 			ctaButton={
 				<HashLink smooth to="#pain">
