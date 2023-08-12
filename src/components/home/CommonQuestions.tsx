@@ -15,7 +15,7 @@ export function CommonQuestions() {
 	const theming = useColorsThemeBased()
 
 	return (
-		<Section hasPaddingX backgroundColor={theming.bgSection} gap={4}>
+		<Section id="questions" hasPaddingX backgroundColor={theming.bgSection} gap={4}>
 			<Heading as="h2" fontFamily="heading" fontSize={{ base: '4xl', md: '6xl' }} fontWeight="light" textAlign="center">
 				Perguntas Frequentes
 			</Heading>
