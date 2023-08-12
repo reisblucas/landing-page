@@ -29,7 +29,7 @@ export function CommonQuestions() {
 				borderRadius="3xl"
 			>
 				{CommonQuestions.Questions.map((question) => (
-					<AccordionItem key={question.title} p={2}>
+					<AccordionItem key={question.title} p={2} border="none">
 						<Heading as="h2">
 							<AccordionButton>
 								<Box as="span" fontWeight="semibold" flex={1} textAlign="left">
