@@ -6,7 +6,7 @@ export const theme = extendTheme({
 		Text,
 	},
 	fonts: {
-		heading: `'Baskerville', 'Barkerville Old Face', sans-serif`, // serif fonts options that transmit authority: Times New Roman, Baskerville, Garamond and Georgia
+		heading: `'Baskerville', sans-serif`, // serif fonts options that transmit authority: Times New Roman, Baskerville, Garamond and Georgia
 		body: `'Cairo', sans-serif`,
 	},
 	colors: {
