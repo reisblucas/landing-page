@@ -23,7 +23,7 @@ export function CTABottom() {
 				<ButtonHero description="Começar Agora" variant="solid" animationParent={animation} as={motion.button} />
 			}
 			leftSection={
-				<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="1024px">
+				<VStack flexDirection="column" alignItems="stretch" gap={8} maxWidth="700px">
 					<VStack flexDirection="column" gap={8} overflow="hidden" position="relative">
 						{CTABottom.steps.map((cta) => (
 							<VStack
