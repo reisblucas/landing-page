@@ -32,7 +32,7 @@ export function Header() {
 				<ColorModeSwitcher size="xs" />
 				<Hamburger />
 
-				<Show above="md">
+				<Show above="lg">
 					<Navlinks />
 				</Show>
 			</Flex>
