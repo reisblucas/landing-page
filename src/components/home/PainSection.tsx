@@ -16,7 +16,7 @@ export function PainSection() {
 			id="pain"
 		>
 			<Heading as="h2" fontSize={{ base: '4xl', md: '6xl' }} fontFamily="heading" fontWeight="light" textAlign="center">
-				Some Pain Heading
+				Some pain heading
 			</Heading>
 
 			<Flex

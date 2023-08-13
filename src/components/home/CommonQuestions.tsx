@@ -17,7 +17,7 @@ export function CommonQuestions() {
 	return (
 		<Section id="questions" hasPaddingX backgroundColor={theming.bgSection} gap={4}>
 			<Heading as="h2" fontFamily="heading" fontSize={{ base: '4xl', md: '6xl' }} fontWeight="light" textAlign="center">
-				Perguntas Frequentes
+				Perguntas frequentes
 			</Heading>
 
 			<Accordion

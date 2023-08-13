@@ -30,7 +30,7 @@ export function CTAMiddle() {
 			>
 				<Flex width={{ base: 'full', md: '60%' }} flexDirection="column" gap={8} flexGrow={{ base: 1, lg: 0 }}>
 					<Heading as="h2" fontFamily="heading" fontSize={{ base: '4xl', md: '6xl' }} fontWeight="light">
-						Economize Dinheiro Como Nunca Antes
+						Economize dinheiro como nunca antes
 					</Heading>
 
 					<ButtonHero description="Começar" icon={FaArrowRight} animation={animation} alignSelf="center" />

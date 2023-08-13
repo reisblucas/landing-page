@@ -10,8 +10,8 @@ export function HowSection() {
 		<Section hasPaddingX justifyContent="center" backgroundColor={theming.bgSection} borderTopRadius="3xl" id="how">
 			<Flex width={{ base: '80%', md: '50%' }} justifyContent="center" m="0 auto" flexDirection="column" gap={4}>
 				<Heading as="h2" fontSize={{ base: '4xl', lg: '6xl' }} fontWeight="light" textAlign="center">
-					Gerencie Facilmente
-					<br />A Sua{' '}
+					Gerencie facilmente
+					<br />a sua{' '}
 					<Text fontSize="inherit" as="span" borderRadius="full" backgroundColor="green.200" px={4}>
 						Vida
 					</Text>

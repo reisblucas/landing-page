@@ -10,7 +10,7 @@ export function WhySection() {
 		<SectionSplit
 			id="socialProof"
 			hasPaddingXOnLeft
-			heading="Providenciamos A Ajuda Que Você Precisa"
+			heading="Providenciamos a ajuda que você precisa"
 			leftSection={
 				<Flex
 					flexDirection="column"
@@ -100,17 +100,17 @@ export function WhySection() {
 export namespace WhySection {
 	export const HowRight = [
 		{
-			title: 'Sem Comissões Ou Tarifas Escondidas',
+			title: 'Sem comissões ou tarifas escondidas',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
 		},
 		{
-			title: 'Melhor Escolha Para Grandes Pagamentos',
+			title: 'Melhor escolha para grandes pagamentos',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
 		},
 		{
-			title: 'Plataforma Construída Para Facilitar A Administração',
+			title: 'Plataforma construída para facilitar a administração',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, eius id! Nostrum id dolor aliquam veniam aliquid temporibus quia, quasi ullam sequi adipisci!',
 		},

@@ -54,7 +54,7 @@ export function Footer() {
 					<HStack gap={12} wrap="wrap" alignSelf="flex-start">
 						<VStack alignItems="flex-start">
 							<Text fontFamily="heading" fontWeight="bold">
-								Lorem Oferece
+								Lorem oferece
 							</Text>
 							<Link>
 								<Text>Lorem</Text>
@@ -88,7 +88,7 @@ export function Footer() {
 						</VStack>
 						<VStack alignItems="flex-start">
 							<Text fontFamily="heading" fontWeight="bold">
-								Sobre Nós
+								Sobre nós
 							</Text>
 							<Link>
 								<Text>Lorem</Text>

@@ -44,8 +44,8 @@ export namespace Navlinks {
 	export const links = [
 		{ href: '#banner', title: 'Início' }, // 0 - 1052
 		{ href: '#pain', title: 'Atuação' }, // 1052 - 1624
-		{ href: '#socialProof', title: 'Como Te Ajudamos' }, // 1624 - 3162
-		{ href: '#how', title: 'Como Cadastrar' }, // 3162 - 4331
-		{ href: '#questions', title: 'Perguntas Frequentes' }, // 4331
+		{ href: '#socialProof', title: 'Como te ajudamos' }, // 1624 - 3162
+		{ href: '#how', title: 'Como cadastrar' }, // 3162 - 4331
+		{ href: '#questions', title: 'Perguntas frequentes' }, // 4331
 	]
 }

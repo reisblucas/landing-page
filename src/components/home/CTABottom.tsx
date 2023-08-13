@@ -17,7 +17,7 @@ export function CTABottom() {
 			hasPaddingXOnRight
 			hasPaddingXOnLeft
 			backgroundColor={theming.bgSection}
-			heading="Pronto Para Começar?"
+			heading="Pronto para começar?"
 			id="start"
 			ctaButton={
 				<ButtonHero description="Começar Agora" variant="solid" animationParent={animation} as={motion.button} />
